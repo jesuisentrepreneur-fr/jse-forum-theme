@@ -1,5 +1,7 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
+import { on } from "@ember/modifier";         
+import dIcon from "discourse-common/helpers/d-icon";
 
 export default class HeaderSidebarToggleMobile extends Component {
   @service sidebar;
