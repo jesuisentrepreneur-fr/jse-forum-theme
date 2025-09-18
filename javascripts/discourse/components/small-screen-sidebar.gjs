@@ -5,19 +5,17 @@ import Sidebar from "discourse/components/sidebar";
 export default class SmallScreenSidebar extends Component {
   @service site;
   @service capabilities;
-  @service currentUser;
 
   get shouldShow() {
-    return this.currentUser && (this.site.narrowDesktopView || this.capabilities.isIpadOS);
+    return this.site.narrowDesktopView || this.capabilities.isIpadOS;
   }
 
   <template>
     {{#if this.shouldShow}}
       <div class="sidebar-wrapper c-small-sidebar">
+        Coucou
         <Sidebar />
       </div>
-    {{else}}
-      <div class="coucou"></div>
     {{/if}}
   </template>
 }
