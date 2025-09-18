@@ -458,6 +458,10 @@ nav.post-controls .actions button.create {
 /* Mobile */
 
 @media (max-width: 768px) {
+    .sidebar-wrapper {
+        display: none;
+    }
+
     .d-header .title {
         --d-logo-height: 32px;
     }
