@@ -459,7 +459,7 @@ nav.post-controls .actions button.create {
 
 @media (max-width: 768px) {
     .sidebar-wrapper {
-        display: none;
+        display: none!important;
     }
 
     .d-header .title {
