@@ -1,6 +1,6 @@
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
-import { on } from "@ember/modifier";         
+import { on } from "@ember/modifier";
 import dIcon from "discourse-common/helpers/d-icon";
 
 export default class HeaderSidebarToggleMobile extends Component {
@@ -15,7 +15,7 @@ export default class HeaderSidebarToggleMobile extends Component {
       {{on "click" this.toggle}}
       aria-label="Toggle sidebar"
     >
-      {{d-icon "bars"}}
+      {{dIcon "bars"}}
     </button>
   </template>
 }
