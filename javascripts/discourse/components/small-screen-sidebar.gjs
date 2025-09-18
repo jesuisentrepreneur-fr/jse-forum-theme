@@ -13,6 +13,7 @@ export default class SmallScreenSidebar extends Component {
   <template>
     {{#if this.shouldShow}}
       <div class="sidebar-wrapper c-small-sidebar">
+        Coucou
         <Sidebar />
       </div>
     {{/if}}
