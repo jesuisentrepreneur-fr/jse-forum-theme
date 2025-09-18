@@ -26,4 +26,4 @@ const Banner = <template>
   </div>
 </template>;
 
-export default Banner;
+export default Banner; 
