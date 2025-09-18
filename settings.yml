@@ -3,7 +3,7 @@ topic_list_show_usernames:
   type: bool
   required: true
 
-lien_connexion_sso:
+lien_gestion_compte:
   default: ""
   type: string
   validations:

@@ -36,20 +36,6 @@
     --d-sidebar-header-color: var(--pp-grey-000);
     --d-sidebar-header-icon-color: var(--pp-secondary-1);
     
-    --neutral-0: var(--pp-grey-800);
-    --neutral-5: var(--pp-grey-800);
-    --neutral-10: var(--pp-grey-800);
-    --neutral-20: var(--pp-grey-800);
-    --neutral-30: var(--pp-grey-700);
-    --neutral-40: var(--pp-grey-650);
-    --neutral-50: var(--pp-grey-650);
-    --neutral-60: var(--pp-grey-300);
-    --neutral-70: var(--pp-grey-200);
-    --neutral-80: var(--pp-grey-000);
-    --neutral-90: var(--pp-grey-000);
-    --neutral-95: var(--pp-grey-000);
-    --neutral-100: var(--pp-grey-000);
-    
     --primary-very-low: var(--pp-grey-200);
     --primary-medium: var(--pp-secondary-1);
     --primary-med-or-secondary-med: var(--pp-secondary-1);
@@ -59,11 +45,6 @@
 }
 
 /* CSS Personnalisé */
-
-// Fond du site en gris
-html, body {
-  background-color: var(--pp-grey-200);
-}
 
 // Forcer la couleur du texte de la popup didomi en noir
 #didomi-popup { 

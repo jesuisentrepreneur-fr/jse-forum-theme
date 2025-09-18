@@ -7,11 +7,11 @@ html {
 
 html,
 body {
-  background-color: var(--neutral-100);
+  background-color: var(--pp-grey-200);
 
-  @include viewport.until(md) {
-    background-color: var(--neutral-95);
-  }
+  // @include viewport.until(md) {
+  //   background-color: var(--pp-grey-200);
+  // }
 }
 
 :root {

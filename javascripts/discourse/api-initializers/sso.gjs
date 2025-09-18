@@ -20,9 +20,9 @@ export default apiInitializer((api) => {
         document.querySelector(".c-user-trigger").onclick = function() {
             const menuProfileHeader = document.querySelector(".c-user-menu__profile")
             if (menuProfileHeader) {
-                menuProfileHeader.href = settings.lien_connexion_sso;
+                menuProfileHeader.href = settings.lien_gestion_compte;
                 menuProfileHeader.onclick = function() {
-                    window.location = settings.lien_connexion_sso;
+                    window.location = settings.lien_gestion_compte;
                 }
             }
             const menuProfileHeaderTextCTA = document.querySelector(".c-user-menu__profile-cta");
