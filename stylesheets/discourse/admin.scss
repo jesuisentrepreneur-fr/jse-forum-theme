@@ -1,0 +1,17 @@
+.admin-main-nav {
+  display: none;
+
+  .admin-interface & {
+    display: flex;
+  }
+}
+
+.admin-interface #main-outlet {
+  .nav-pills {
+    display: none;
+  }
+
+  .row .nav-pills {
+    display: flex;
+  }
+}

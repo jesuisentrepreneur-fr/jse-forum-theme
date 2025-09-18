@@ -1,0 +1,463 @@
+@use "lib/viewport";
+
+#topic-title {
+  display: flex;
+  gap: 2.15rem;
+  margin: 0;
+  padding: 1rem;
+  border-bottom: var(--border-inner);
+
+  &::before,
+  &::after {
+    content: unset;
+  }
+
+  .title-wrapper {
+    row-gap: 0.25rem;
+  }
+
+  h1 {
+    @include headline-small;
+
+    a {
+      color: var(--neutral-10);
+    }
+  }
+
+  .topic-title-outlet {
+    order: -1;
+  }
+}
+
+.more-topics__container .nav {
+  position: relative;
+}
+
+.topic-meta-data {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  .post-infos {
+    display: contents;
+
+    .reply-to-tab {
+      order: 10;
+      width: 100%;
+      max-width: unset;
+      margin: 0.25rem 0 0;
+      color: var(--neutral-30);
+
+      @include body-small;
+
+      .avatar {
+        width: 1rem;
+        height: 1rem;
+        margin: 0 0.25rem;
+      }
+
+      span {
+        color: var(--primary-30);
+      }
+
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .post-info {
+      @include body-small;
+
+      &.post-date {
+        order: 2;
+      }
+
+      &.edits {
+        display: inline-flex;
+        align-self: center;
+        order: 3;
+
+        .widget-button {
+          height: unset;
+          margin-left: 0.5em;
+          padding: 0;
+          font-size: var(--font-up-1);
+
+          @include body-small;
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      a {
+        color: var(--neutral-30);
+      }
+    }
+  }
+
+  .names {
+    display: contents;
+
+    div.customer-flair-wrapper {
+      order: 5;
+      width: 100%;
+
+      .customer-flair {
+        display: inline-flex;
+        align-items: center;
+        height: 1.25rem;
+        margin: 0;
+        padding: 0 0.5rem;
+        border: 0;
+        border-radius: var(--rounded-full);
+      }
+    }
+
+    span {
+      margin: 0;
+      color: var(--neutral-50);
+
+      @include body-small;
+
+      &.first {
+        margin-right: 0.5rem;
+
+        a {
+          color: var(--neutral-10);
+
+          @include label-large;
+        }
+      }
+
+      &.second {
+        order: 1;
+
+        @include body-small;
+
+        &::after {
+          content: "\00a0·\00a0";
+        }
+
+        a {
+          color: var(--neutral-30);
+        }
+      }
+
+      &.user-title {
+        order: 9;
+        width: 100%;
+        color: var(--neutral-50);
+      }
+    }
+
+    .svg-icon-title {
+      font-size: var(--font-up-1);
+    }
+  }
+}
+
+.small-action-custom-message {
+  margin-top: 0;
+}
+
+.small-action-buttons {
+  order: 2;
+}
+
+.container.posts {
+  .timeline-controls {
+    margin-top: 1em;
+  }
+
+  & > .row {
+    border-right: var(--border-inner);
+  }
+}
+
+.topic-post {
+  border: 0;
+  border-bottom: var(--border-inner);
+
+  article.onscreen-post {
+    .row {
+      column-gap: 1rem;
+      padding: 1rem;
+
+      .topic-avatar {
+        position: sticky;
+        top: calc(
+          var(--header-offset) + 1rem
+        ) !important; // why is sticky conditional?
+        float: unset;
+        width: unset;
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        @include viewport.until(md) {
+          position: relative;
+          top: unset !important;
+        }
+      }
+
+      .topic-body {
+        float: unset;
+        flex: 1;
+        width: unset;
+        padding-top: 0;
+        border: 0;
+
+        &.highlighted {
+          animation: none;
+        }
+
+        .topic-meta-data {
+          padding: 0;
+        }
+
+        .regular.contents {
+          margin-top: 1rem;
+        }
+
+        .cooked {
+          padding: 0;
+
+          @include body-large;
+        }
+      }
+    }
+  }
+}
+
+.post-notice {
+  gap: 1rem;
+  max-width: unset;
+  padding: 1rem;
+  border: 0;
+  border-bottom: var(--border-inner);
+
+  &::before {
+    padding: 0 0.875rem;
+  }
+
+  p {
+    @include body-medium;
+  }
+
+  &.old {
+    color: inherit;
+  }
+}
+
+.small-action {
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 0;
+  border-bottom: var(--border-inner);
+
+  &.topic-post-visited {
+    .topic-post-visited-line {
+      padding: 1rem;
+      color: var(--neutral-50);
+      border: 0;
+
+      @include body-medium;
+
+      span.topic-post-visited-message {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+
+  .small-action-buttons {
+    button {
+      transition: none;
+
+      @include button($style: tertiary);
+    }
+  }
+
+  .topic-avatar,
+  .small-action-desc {
+    padding: 0;
+    border-top: 0;
+  }
+
+  .topic-avatar {
+    align-self: unset;
+    width: 3rem;
+  }
+
+  .small-action-desc {
+    display: flex;
+    flex-wrap: nowrap;
+    color: var(--neutral-30);
+
+    @include body-medium;
+
+    .avatar {
+      margin: 0;
+    }
+
+    .small-action-buttons {
+      display: flex;
+    }
+
+    .small-action-contents {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    p {
+      padding: 0;
+    }
+  }
+}
+
+.regular {
+  .more-topics {
+    &__container {
+      max-width: unset;
+      padding: 1em;
+    }
+
+    &__list-title {
+      padding-left: 1em;
+
+      @include title-medium;
+    }
+
+    &__browse-more {
+      margin: 0;
+      padding: 1rem;
+
+      @include body-medium;
+    }
+  }
+}
+
+#topic-footer-buttons {
+  padding-inline: 1rem;
+}
+
+.topic-status-info,
+.topic-timer-info {
+  .topic-timer-heading,
+  .slow-mode-heading {
+    padding-left: 1rem;
+  }
+}
+
+.topic-status-info,
+.topic-timer-info,
+.topic-map.--op {
+  border-top-color: var(--primary-very-low);
+}
+
+.topic-map.--op,
+.topic-map.--bottom {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.topic-map.--bottom {
+  border-bottom-color: var(--primary-very-low);
+}
+
+.topic-map .topic-link {
+  padding: 0;
+
+  &::after {
+    display: none;
+  }
+}
+
+.topic-back-button {
+  margin-left: 0.85rem;
+
+  .d-icon {
+    padding-top: 0.5rem; // vertical alignment
+    color: var(--neutral-30);
+  }
+}
+
+.edit-controls {
+  display: flex;
+}
+
+// hide the back button when editing the topic title to avoid confusion
+.title-wrapper:has(.edit-topic-title) + .topic-title-outlet {
+  visibility: hidden;
+}
+
+.container.posts #topic-progress-wrapper {
+  margin-bottom: 0.5em;
+
+  .topic-admin-menu-button-container + #topic-progress {
+    border-radius: var(--rounded-md);
+  }
+
+  .topic-admin-menu-button .toggle-admin-menu {
+    height: 100%;
+    margin-right: 0.25em;
+    border-radius: var(--rounded-md);
+  }
+}
+
+nav.post-controls .actions button.d-hover {
+  background: transparent;
+}
+
+.double-button {
+  border-radius: var(--rounded-full);
+
+  @include hover;
+
+  button.d-hover,
+  button:hover {
+    &::after {
+      display: none; // undoes the global hover effect
+    }
+  }
+}
+
+nav.post-controls
+  .actions
+  .double-button
+  button.button-count
+  + .toggle-like.d-hover,
+nav.post-controls .actions .double-button:hover button {
+  background: transparent; // undoes the very specific core hover effect
+
+  &.d-hover {
+    background: transparent;
+  }
+}
+
+.discourse-reactions-double-button {
+  border-radius: var(--rounded-md);
+}
+
+.post-menu-area {
+  margin-bottom: 0;
+}
+
+.embedded-posts.bottom {
+  > div {
+    margin-bottom: 0;
+  }
+
+  .reply .row {
+    padding-left: 0.5rem;
+  }
+}
+
+.embedded-posts.bottom .collapse-up {
+  bottom: -5em;
+}

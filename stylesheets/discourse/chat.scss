@@ -1,0 +1,36 @@
+body.has-full-page-chat {
+  #main-outlet-wrapper #main-outlet {
+    gap: 0 2rem;
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+
+  .sidebar-section-wrapper {
+    &[data-section-name="chat-dms"],
+    &[data-section-name="chat-channels"] {
+      display: block;
+    }
+  }
+
+  [data-section-name="categories"] {
+    display: none;
+  }
+}
+
+.has-full-page-chat:not(.discourse-sidebar) .full-page-chat {
+  border: none;
+}
+
+.chat-composer__wrapper {
+  background: transparent;
+}
+
+.chat-composer-dropdown__menu-trigger {
+  align-self: center;
+}

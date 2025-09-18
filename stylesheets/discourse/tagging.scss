@@ -1,0 +1,35 @@
+.discourse-tags {
+  gap: 0.5rem;
+
+  .discourse-tag.simple {
+    max-width: unset;
+
+    @include badge;
+
+    &:not(:last-child, :hover)::after {
+      content: unset;
+    }
+  }
+}
+
+.tags-index {
+  .list-controls {
+    padding: 1rem;
+  }
+
+  hr {
+    margin: 0;
+    border-top: var(--border-inner);
+  }
+
+  .tag-sort-options {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .tags-list {
+    margin: 0;
+    padding: 1rem;
+    border: 0;
+  }
+}

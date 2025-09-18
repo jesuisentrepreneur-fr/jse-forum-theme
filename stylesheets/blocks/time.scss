@@ -1,0 +1,17 @@
+.block-time {
+  --w: span 2;
+  --h: span 1;
+  --ai: center;
+  --jc: center;
+  --fd: column;
+
+  &__date {
+    @include body-small;
+  }
+
+  &__time {
+    padding-bottom: 0.125rem;
+
+    @include title-large;
+  }
+}

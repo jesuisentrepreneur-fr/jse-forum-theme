@@ -1,0 +1,28 @@
+@mixin post-aside {
+  background-color: var(--neutral-95);
+  border-left: 5px solid var(--neutral-80);
+}
+
+$breakpoints: (
+  mobile-small: 320px,
+  mobile-medium: 350px,
+  mobile-large: 450px,
+  mobile-extra-large: 550px,
+  tablet: 768px,
+  medium: 850px,
+  large: 1000px,
+  extra-large: 1140px,
+);
+
+a {
+  &.mention,
+  &.mention-group {
+    display: inline;
+    padding: 0.0625rem 0.25rem;
+    color: var(--neutral-30);
+    background: var(--neutral-90);
+    border-radius: var(--rounded-md);
+
+    @include body-medium;
+  }
+}

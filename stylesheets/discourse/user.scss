@@ -1,0 +1,52 @@
+.user-content {
+  background: none;
+}
+
+.user-activity-bookmarks-page {
+  .user-navigation-secondary {
+    display: none;
+  }
+}
+
+.user-notifications-responses,
+.user-notifications-mentions {
+  .navigation-controls {
+    display: none;
+  }
+
+  .nav-pills {
+    li:not(
+        .user-nav__notifications-responses,
+        .user-nav__notifications-mentions
+      ) {
+      display: none;
+    }
+  }
+}
+
+[data-user-card="Discourse"],
+[data-user-card="system"] {
+  img.avatar {
+    border-bottom-left-radius: 0;
+  }
+}
+
+.user-admin {
+  border-radius: var(--rounded-md);
+}
+
+.invite-actions {
+  display: flex;
+  gap: 0.5em;
+
+  .btn {
+    border-radius: var(--rounded-full);
+  }
+}
+
+.pref-username,
+.pref-avatar {
+  .btn {
+    display: inline-flex;
+  }
+}

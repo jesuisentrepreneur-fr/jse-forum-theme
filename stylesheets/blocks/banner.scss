@@ -1,0 +1,31 @@
+.block-banner {
+  --b: 0;
+  --jc: center;
+  --ai: center;
+  --bg: url($block-banner-bg) no-repeat 50% 50%;
+  --c: #14263f;
+  --p: 1rem;
+  --fd: column;
+  --w: span 12;
+  box-sizing: border-box;
+  padding: 2rem;
+  text-align: center;
+
+  &__ctas {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    margin: 0;
+
+    @include headline-small;
+  }
+
+  &__blurb {
+    margin-top: 0.75rem;
+
+    @include body-medium;
+  }
+}

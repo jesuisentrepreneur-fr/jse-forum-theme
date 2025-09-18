@@ -1,0 +1,9 @@
+// sidebar
+#main-outlet-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.powered-by-discourse {
+  @include sr-only;
+}

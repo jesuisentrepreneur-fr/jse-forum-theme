@@ -1,0 +1,99 @@
+.c-user-menu {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 16rem;
+
+  a {
+    color: var(--neutral-10);
+  }
+
+  &__profile {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+
+      @include body-small;
+
+      span:first-child {
+        @include body-large;
+      }
+
+      span:nth-child(2) {
+        &::before {
+          content: "@";
+        }
+      }
+    }
+
+    .c-user-menu__profile-cta {
+      color: var(--tertiary);
+    }
+
+    &:hover {
+      .c-user-menu__profile-cta {
+        text-decoration: underline;
+      }
+    }
+
+    &-cta {
+      color: var(--primary-50);
+
+      @include body-small;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style: none;
+    border-top: var(--border-inner);
+
+    li {
+      display: flex;
+
+      @include body-medium;
+
+      a {
+        display: flex;
+        flex: 1;
+        gap: 1rem;
+        align-items: center;
+        padding: 0.5rem 1rem;
+
+        @include hover;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    border-top: var(--border-inner);
+
+    @include label-small;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

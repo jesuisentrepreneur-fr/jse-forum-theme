@@ -1,0 +1,151 @@
+@use "lib/viewport";
+@import "online";
+@import "chart";
+@import "time";
+@import "birthday";
+@import "profile";
+@import "top-contributors";
+@import "top-topics";
+@import "cta";
+@import "banner";
+
+.blocks.--top {
+  container-type: inline-size;
+  display: flex;
+  justify-content: center;
+  background: var(--neutral-100);
+  border-bottom: var(--border-outer);
+
+  .blocks__wrapper {
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: repeat(12, 4rem);
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
+    box-sizing: content-box;
+    box-sizing: border-box;
+    width: 59rem;
+    height: 100%;
+    max-height: 19rem;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 47rem;
+
+    @container (max-width: 59rem) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blocks__row {
+      display: grid;
+      grid-column: span 12;
+      grid-template-columns: repeat(12, 4rem);
+      gap: 1rem;
+
+      .block {
+        --bg: transparent;
+      }
+
+      @container (max-width: 59rem) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+#main-outlet-wrapper {
+  .blocks {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include viewport.until(lg) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 19rem;
+    }
+
+    &__row {
+      &:not(:has(.block--4w)) {
+        display: grid;
+        grid-auto-rows: 4rem;
+        grid-template-columns: repeat(4, 4rem);
+        gap: 1rem;
+        align-items: stretch;
+      }
+    }
+  }
+}
+
+.block {
+  --br: var(--rounded-#{$blocks_border_radius});
+  --b: 0;
+  --bg: var(--neutral-95);
+  position: relative;
+  overflow: var(--o, hidden);
+  display: flex;
+  grid-column: var(--w, span 1);
+  grid-row: var(--h, span 1);
+  flex-direction: var(--fd, row);
+  align-items: var(--ai, flex-start);
+  justify-content: var(--jc, flex-start);
+  box-sizing: border-box;
+  padding: var(--p, 0.5rem);
+  color: var(--neutral-10);
+  background: var(--bg, var(--neutral-100));
+  border: var(--b, var(--border-outer));
+  border-radius: var(--br, var(--rounded-md));
+
+  &--4w {
+    --w: span 4;
+    --h: auto;
+  }
+
+  &--2x1 {
+    --w: span 2;
+    --h: span 1;
+  }
+
+  &--2x2 {
+    --w: span 2;
+    --h: span 2;
+  }
+
+  &--4x1 {
+    --w: span 4;
+    --h: span 1;
+  }
+
+  &--4x2 {
+    --w: span 4;
+    --h: span 2;
+  }
+
+  &--4x4 {
+    --w: span 4;
+    --h: span 4;
+  }
+
+  &--4x6 {
+    --w: span 4;
+    --h: span 6;
+  }
+
+  &--4x8 {
+    --w: span 4;
+    --h: span 8;
+  }
+}
+
+.block-user {
+  --w: span 4;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Central",
+  "component": false,
+  "license_url": "https://github.com/discourse/discourse-central-theme/blob/main/LICENSE",
+  "about_url": "https://github.com/discourse/discourse-central-theme",
+  "authors": "Carson Chang & The Discourse Team",
+  "theme_version": "0.0.1",
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {},
+  "color_schemes": {
+    "Propulse": {
+      "primary": "071621",
+      "secondary": "ffffff",
+      "tertiary": "308276",
+      "quaternary": "308276",
+      "header_background": "ffffff",
+      "header_primary": "071621",
+      "highlight": "308276",
+      "danger": "AE0014",
+      "success": "008037",
+      "love": "308276",
+      "selected": "ECEDF0",
+      "hover": "ECEDF0"
+    }
+  },
+  "modifiers": {
+    "serialize_topic_op_likes_data": true
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}
