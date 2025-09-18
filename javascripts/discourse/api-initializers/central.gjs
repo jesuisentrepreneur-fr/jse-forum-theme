@@ -17,3 +17,6 @@ export default apiInitializer("1.0", () => {
     document.head.appendChild(styleElement);
   }
 });
+
+import { apiInitializer } from "discourse/lib/api";
+

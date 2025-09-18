@@ -1,0 +1,502 @@
+/* temporaire, addé pour propulse, à bien répartir */
+
+@import "_base";
+
+/* Palette Propulse personnalisée */
+
+:root {
+    --pp-primary: #007461;
+    --pp-secondary-1: #308276;
+    --pp-secondary-2: #A0D7A2;
+    --pp-secondary-3: #004652;
+    --pp-secondary-4: #D8EAD7;
+    --pp-accent-1: #E62F44;
+    --pp-accent-2: #0A94A8;
+    
+    --pp-grey-000: #FFFFFF;
+    --pp-grey-200: #F7F8FA;
+    --pp-grey-300: #ECEDF0;
+    --pp-grey-600: #C1C9D6;
+    --pp-grey-650: #8D93AA;
+    --pp-grey-700: #666E8A;
+    --pp-grey-800: #071621;
+    --pp-grey-900: #000000;
+    
+    // Fix
+    --header_primary: var(--pp-secondary-1);
+    
+    --d-sidebar-background: var(--pp-grey-200);
+    --d-sidebar-admin-background: var(--pp-grey-200);
+    
+    --d-sidebar-active-color: var(--pp-secondary-1);
+    
+    --d-sidebar-highlight-background: var(--pp-grey-000);
+    --d-sidebar-active-background: var(--pp-grey-000);
+    
+    --d-sidebar-header-color: var(--pp-grey-000);
+    --d-sidebar-header-icon-color: var(--pp-secondary-1);
+    
+    --neutral-0: var(--pp-grey-800);
+    --neutral-5: var(--pp-grey-800);
+    --neutral-10: var(--pp-grey-800);
+    --neutral-20: var(--pp-grey-800);
+    --neutral-30: var(--pp-grey-700);
+    --neutral-40: var(--pp-grey-650);
+    --neutral-50: var(--pp-grey-650);
+    --neutral-60: var(--pp-grey-300);
+    --neutral-70: var(--pp-grey-200);
+    --neutral-80: var(--pp-grey-000);
+    --neutral-90: var(--pp-grey-000);
+    --neutral-95: var(--pp-grey-000);
+    --neutral-100: var(--pp-grey-000);
+    
+    --primary-very-low: var(--pp-grey-200);
+    --primary-medium: var(--pp-secondary-1);
+    --primary-med-or-secondary-med: var(--pp-secondary-1);
+    
+    // Last edit 16/09/25 : à mettre sur la prod 
+    --d-max-width: 1440px;  
+}
+
+/* CSS Personnalisé */
+
+// Fond du site en gris
+html, body {
+  background-color: var(--pp-grey-200);
+}
+
+// Forcer la couleur du texte de la popup didomi en noir
+#didomi-popup { 
+  color: var(--pp-grey-900);
+}
+
+// Fond des blocks (sidebar de droite sur la home)
+.block {
+  --bg: var(--pp-grey-000);
+  color: var(--pp-grey-800);
+}
+
+// Cacher les span qui ont aria-hidden="true"
+span[aria-hidden="true"] {
+    display: none;
+}
+
+// Contour des inputs
+input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], 
+input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], 
+input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color],
+.select-kit.combo-box .select-kit-header {
+    border: 1px solid var(--pp-grey-600);
+}
+
+
+/* Header */
+.d-header {
+    background-color: var(--pp-grey-000);
+    padding: 12px 64px;
+}
+
+.d-header .login-button {
+    border-radius: 64px;
+}
+
+.d-header .login-button .d-icon {
+    display: none;
+}
+
+.d-header .wrap {
+    padding: 0;
+    max-width: 100%;
+}
+
+.d-header-icons .header-dropdown-toggle > .btn .d-icon,
+.d-header .d-header-icons li.c-create .d-icon,
+.header-dropdown-toggle.current-user>.d-icon-bell {
+    color: var(--pp-secondary-1);
+}
+
+.d-header-mode .bootstrap-mode {
+    background-color: var(--pp-secondary-1);  
+    color: var(--pp-grey-000)!important;
+}
+
+.discourse-no-touch .d-header-icons .header-dropdown-toggle>.btn:hover .d-icon {
+    color: var(--pp-secondary-1);
+}
+
+.d-header .d-header-icons {
+    order: 1;
+}
+
+.d-header .header-buttons {
+    order: 2;
+    margin-top: 0;
+}
+
+// Custom header
+.d-header-wrap {
+    width: 100vw;
+}
+
+.d-header {
+    width: auto;
+}
+
+body.has-sidebar-page .d-header .wrap {
+    max-width: 100%;
+    padding: 0;
+}
+
+.d-header .wrap .contents {
+    display: flex;
+    gap: 0;
+}
+
+.d-header .d-header-icons li.c-user {
+    display: flex;
+}
+
+// Search bar
+.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container,
+.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container:has(.search-menu-panel),
+.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container:hover {
+  background-color: var(--pp-grey-200);
+}
+ 
+/* Sidebar */
+
+// Fix bug sidebar scroll //
+.sticky-sidebar > div {
+    position: sticky!important;
+    top: var(--main-outlet-offset)!important;
+}
+
+// Couleurs des éléments de la sidebar
+.sidebar-section-link-wrapper .sidebar-section-link,
+.sidebar-section-link-wrapper .sidebar-section-link-prefix.icon, 
+.sidebar-section-link-wrapper .sidebar-section-link-prefix.span {
+  color: var(--pp-secondary-1);
+}
+
+.sidebar-section-link-wrapper .sidebar-section-link:hover .sidebar-section-link-prefix.icon, 
+.sidebar-section-link-wrapper .sidebar-section-link:hover .sidebar-section-link-prefix.span,
+.sidebar-section-link-wrapper .sidebar-section-link:hover {
+  color: var(--pp-secondary-1);
+}
+
+.sidebar-section-wrapper .sidebar-section-header {
+  font-size: var(--font-0);
+  color: var(--pp-secondary-1);
+  background: none;
+}
+
+body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-link-wrapper[data-category-id] .sidebar-section-link-prefix:before {
+  all: unset;
+}
+
+body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-link-wrapper[data-category-id] .prefix-span {
+  visibility: visible;
+}
+
+.sidebar-section-link-wrapper .sidebar-section-link-prefix .prefix-square {
+    border-radius: 2px !important;
+}
+
+.sidebar-section-link-wrapper .sidebar-section-link-prefix {
+  margin-right: 0.35rem;
+}
+
+.sidebar-footer-wrapper .sidebar-footer-container:before {
+  all: unset;
+}
+
+
+/* Welcome Banner */
+
+// Propriétés quand la bannière est placé en dessous du header
+.below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
+  margin-bottom: 0;
+  width: 100%;
+  border-radius: var(--rounded-xl);
+  box-shadow: none;
+  background: var(--pp-grey-000);
+}
+
+// Propriétés quand la bannière est placée dans le main container
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-wrapper {
+    margin: 0;
+}
+
+// Enlever le padding 
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner {
+    padding: 0 0 16px;
+}
+
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper {
+  margin: 0;
+  width: 100%;
+  border-radius: var(--rounded-lg);
+  box-shadow: none;
+  background: var(--pp-grey-000);
+}
+
+// Couleur des liens 
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper a,
+.below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper a {
+    color: var(--pp-secondary-1);
+}
+
+// Bouton fermer
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-close,
+.below-site-header-outlet.welcome-link-banner-connector .welcome-link-banner-close {
+    background-color: transparent;
+}
+
+
+
+/* Main */
+// Enlever la bordure de main-outlet
+body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapper #main-outlet {
+    border: 0;
+}
+
+
+// Rajout du bouton "create topic"
+.fk-d-button-tooltip:has(#create-topic) { 
+    display: flex;
+    grid-area: create;
+}
+
+// Ajuster la couleur du bouton "create topic"
+.fk-d-button-tooltip #create-topic {
+    color: var(--pp-grey-000);
+    background-color: var(--pp-secondary-1);
+}
+
+.fk-d-button-tooltip #create-topic .d-icon {
+    color: var(--pp-grey-000);
+}
+
+// Ajuster la grid template
+.navigation-category .navigation-container .navigation-controls {
+    grid-template-areas:
+    "title title notifications edit list"
+    "description description description description description"
+    "create create . . .";
+    grid-template-columns: 2rem auto 2.5rem 2.5rem 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+// Ajuster le bouton notif 
+.navigation-category .navigation-container .navigation-controls .notifications-tracking-trigger {
+    border-radius: var(--rounded-full);
+    height: 2.5rem;
+}
+
+// Ajuster le bouton edit 
+.navigation-container .navigation-controls .edit-category {
+    left: 0;
+}
+
+// Ajuster le positionnement pour la home (navigation-topic)
+.navigation-topics .navigation-container .navigation-controls {
+    gap: 1rem;
+}
+
+.navigation-topics .navigation-container .navigation-controls .breadcrumbs__title {
+    order: 1;
+}
+
+.navigation-topics .navigation-container .navigation-controls .fk-d-button-tooltip {
+    order: 2;
+}
+
+.navigation-topics .navigation-container .navigation-controls .breadcrumbs__select {
+    order: 3;
+}
+
+// Ajuster le positionnement pour la page des categories (categories-list)
+.categories-list .navigation-container .navigation-controls {
+    gap: 1rem;
+}
+
+.categories-list .navigation-container .navigation-controls .breadcrumbs__title {
+    order: 1;
+}
+
+.categories-list .navigation-container .navigation-controls .fk-d-button-tooltip {
+    order: 2;
+}
+
+
+// Content - Topic
+.extra-info-wrapper .topic-link {
+    color: var(--pp-secondary-1);
+}
+
+img.avatar:not(.winner__avatar img.avatar,.user-card-avatar img.avatar), .cooked img.avatar:not(.thumbnail):not(.ytp-thumbnail-image):not(.emoji) {
+    border: 0.25rem solid var(--pp-light-grey);
+    background: var(--pp-light-grey);
+    border-radius: 50%;
+}
+
+.timeline-container .topic-timeline .start-date,
+.timeline-container .topic-timeline .now-date,
+.timeline-container .topic-timeline .timeline-ago{
+    color: var(--pp-secondary-1);
+}
+
+.timeline-container .topic-timeline .timeline-handle {
+    background-color: var(--pp-secondary-1);
+}
+
+.topic-list-icons .d-icon-thumbtack.unpinned, .topic-list .d-icon-thumbtack.unpinned, 
+.latest-topic-list .d-icon-thumbtack.unpinned, .top-topic-list .d-icon-thumbtack.unpinned,
+.badge-category__wrapper .d-icon, .names .fa, .post-info.edits .widget-button .d-icon,
+.topic-list-icons .d-icon-thumbtack, .topic-list .d-icon-thumbtack, 
+.latest-topic-list .d-icon-thumbtack, .top-topic-list .d-icon-thumbtack{
+    color: var(--pp-secondary-1); 
+}
+
+.badge-category__wrapper .badge-category::before {
+    content: "";
+    background: var(--category-badge-color);
+    width: 1rem!important;
+    height: 1rem!important;
+    display: inline;
+    border-radius: var(--rounded-sm);
+}
+
+kbd {
+    background: none;
+    border: 1px solid var(--pp-secondary-1);
+}
+
+.topic-body .cooked details, details .d-editor-preview, details.details__boxed {
+    background: none;
+}
+
+span.chcklst-box:not(.checked).fa-square-o::before {
+    background-color: var(--pp-secondary-1);
+}
+
+blockquote {
+    border-left: 5px solid var(--pp-secondary-1);
+}
+
+// Content - Footer topics
+.btn {
+    color: var(--pp-grey-800);
+    background-color: var(--pp-grey-300);
+}
+
+.btn .d-icon {
+    color: var(--pp-grey-800);
+}
+
+.btn-flat .d-icon {
+  color: var(--pp-secondary-1);  
+}
+
+.btn-transparent .d-icon, .btn-transparent.btn-default .d-icon {
+  color: var(--pp-secondary-1);
+}
+
+.btn-primary {
+    color: var(--pp-grey-000);
+    background-color: var(--pp-secondary-1);
+}
+
+.btn-primary .d-icon {
+    color: var(--pp-grey-000);
+}
+
+nav.post-controls .actions button.create {
+    color: var(--pp-grey-800);
+    background-color: var(--pp-grey-300);
+}
+
+/* Admin */
+.admin-report .d-page-subheader__title a,
+.admin-area .sidebar-wrapper .admin-panel .sidebar-section-header-text,
+.admin-area .content-list ul li a,
+.admin-customize .themes-list-container__item {
+    color: var(--pp-secondary-1);
+}
+
+.admin-customize .themes-list-header .tab, .discourse-no-touch .admin-customize .themes-list-header .tab .d-icon {
+    color: var(--pp-secondary-1);
+}
+
+.admin-area .btn, .admin-area .btn .d-icon {
+    color: var(--pp-grey-800);
+}
+
+.admin-area .btn-primary, .admin-area .btn-primary .d-icon {
+    color: var(--pp-grey-000);
+}
+
+.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode {
+    background: none;
+}
+
+.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode .d-icon {
+    color: var(--pp-secondary-1);
+}
+
+
+
+// Last edit 15/09/25 : à push sur prod
+
+// Fix Layout homepage without third column
+body.has-sidebar-page #main-outlet-wrapper, body #main-outlet-wrapper {
+    grid-template-areas: "navigation content";
+    grid-template-columns: var(--column-navigation) var(--column-content);
+}
+
+body.has-sidebar-page .wrap {
+    max-width: calc(var(--d-sidebar-width) + var(--d-max-width))!important;
+}
+
+// Show views, activity on topics
+table.topic-list:not(.bookmark-list) tbody.topic-list-body tr.topic-list-item {
+grid-template-areas:
+        "avatar author posters views activity actions"
+        "avatar category posters views activity actions"
+        "avatar title posters views activity actions"
+        "avatar tags posters views activity actions"
+        "avatar content posters views activity actions"
+        "avatar replies posters views activity actions";
+grid-template-columns: 2rem auto 8rem 4rem 4rem 6rem;
+}
+
+.topic-list-item.visited .topic-list-data, .latest-topic-list-item.visited, .category-topic-link.visited {
+    background-color: transparent;
+}
+
+table.topic-list:not(.bookmark-list) tbody.topic-list-body tr.topic-list-item td.topic-list-data.posters {
+    display: flex;
+    grid-area: posters;
+    place-self: center flex-end;
+    width: 100%;
+}
+
+.topic-list .posters>a {
+    margin-right: -6px;
+}
+
+table.topic-list:not(.bookmark-list) tbody.topic-list-body tr.topic-list-item td.topic-list-data.views {
+    display: flex;
+    grid-area: views;
+    place-self: center flex-end;
+    width: 100%;
+    font-size: 14px;
+}
+
+table.topic-list:not(.bookmark-list) tbody.topic-list-body tr.topic-list-item td.topic-list-data.activity {
+    display: flex;
+    grid-area: activity;
+    place-self: center flex-end;
+    width: 100%;
+    font-size: 14px;
+}

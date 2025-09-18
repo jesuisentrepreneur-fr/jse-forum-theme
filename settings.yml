@@ -3,6 +3,12 @@ topic_list_show_usernames:
   type: bool
   required: true
 
+lien_connexion_sso:
+  default: ""
+  type: string
+  validations:
+    url: true
+
 leaderboard_id:
   default: 7
   type: integer
