@@ -1,9 +1,9 @@
 {
-  "name": "Central",
+  "name": "JSE",
   "component": false,
-  "license_url": "https://github.com/discourse/discourse-central-theme/blob/main/LICENSE",
-  "about_url": "https://github.com/discourse/discourse-central-theme",
-  "authors": "Carson Chang & The Discourse Team",
+  "license_url": "",
+  "about_url": "",
+  "authors": "Fed",
   "theme_version": "0.0.1",
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
