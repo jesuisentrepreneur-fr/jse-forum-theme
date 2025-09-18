@@ -458,6 +458,10 @@ nav.post-controls .actions button.create {
 /* Mobile */
 
 @media (max-width: 768px) {
+    .c-user-content {
+        max-width: auto!important;
+    }
+
     .sidebar-wrapper {
         display: none!important;
     }
