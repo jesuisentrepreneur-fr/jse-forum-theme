@@ -454,3 +454,93 @@ nav.post-controls .actions button.create {
 .admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode .d-icon {
     color: var(--pp-secondary-1);
 }
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .topic-navigation + .row {
+        max-width: unset !important; // overrides very specific core rule
+    }
+
+    .topic-post article.onscreen-post .row .topic-avatar {
+        float: left;
+        margin-right: 0.5em;
+    }
+
+    .d-header .extra-info-wrapper ~ .panel {
+        .d-header-icons,
+        .header-buttons {
+            display: flex;
+        }
+    }
+
+    .read-state {
+        right: 1em;
+    }
+
+    .topic-title-outlet.back {
+        display: none;
+    }
+
+    // hide footer nav on mobile chat routes to maximize chat space
+
+    body.has-full-page-chat {
+        .sidebar-wrapper {
+            display: none;
+        }
+    }
+
+    // fix padding header mobile
+    .d-header {
+        padding: 12px 24px;
+    }
+
+    // fix padding welcome banner mobile 
+    .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-wrapper, 
+    .below-site-header-outlet.welcome-link-banner-connector .welcome-link-banner-wrapper {
+        margin-top: 1em;
+    }
+    .above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, 
+    .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
+        max-width: 90vw;
+        margin-top: 0;
+    }
+
+    // fix la taille de la modal "reply control" (nouveau message)
+    body.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+        width: 100%;
+        margin: auto;
+        // border-top: 1px solid var(--pp-grey-650);
+        box-shadow: 0 10px 60px -5px rgba(193, 201, 214, 0.45);
+    }
+
+    // fix la taille de main outlet
+    body.has-sidebar-page:not(:has(.blocks.--right)) #main-outlet-wrapper #main-outlet, 
+    body:not(:has(.blocks.--right)) #main-outlet-wrapper #main-outlet {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    // fix taille d'un élément sur la page profil qui sortait de la div
+    .user-main .about .secondary {
+        width: auto;
+    }
+
+    // show toggle menu 
+    .d-header .header-sidebar-toggle {
+        display: block;
+    }
+
+    .d-header .header-sidebar-toggle .btn {
+        background-color: transparent;
+    }
+    .header-sidebar-toggle button .d-icon {
+        color: var(--pp-grey-900);;
+    }
+
+    // fix reply button on topics
+    #topic-footer-buttons {
+        padding-right: 1rem;
+    }
+    
+}
