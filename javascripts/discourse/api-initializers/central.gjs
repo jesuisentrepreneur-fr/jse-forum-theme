@@ -1,22 +1,23 @@
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("1.0", () => {
-  const categories = settings.category_icons;
+  const categories = settings.category_icons || [];
+  if (!categories.length) return;
 
-  if (categories) {
-    const css = categories.map((category) => {
-      const id = category.id[0];
-      const emoji = category.emoji;
+  const css = categories
+    .map(({ id, emoji }) =>
+      `.badge-category__wrapper .badge-category[data-category-id="${id}"]::before { content: "${emoji}"; }`
+    )
+    .join("\n");
 
-      return `.badge-category__wrapper .badge-category[data-category-id="${id}"]:before { content: "${emoji}"; }`;
-    });
-
-    const styleElement = document.createElement("style");
-    styleElement.type = "text/css";
-    styleElement.appendChild(document.createTextNode(css.join("\n")));
-    document.head.appendChild(styleElement);
+  let styleEl = document.getElementById("theme-category-icons");
+  if (!styleEl) {
+    styleEl = document.createElement("style");
+    styleEl.id = "theme-category-icons";
+    styleEl.type = "text/css";
+    document.head.appendChild(styleEl);
   }
+  styleEl.textContent = css;
 });
 
-import { apiInitializer } from "discourse/lib/api";
 
