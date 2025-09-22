@@ -1,6 +1,6 @@
 :root {
     --pp-primary: #007461;
-    --pp-secondary-1: red;
+    --pp-secondary-1: #308276;
     --pp-secondary-2: #A0D7A2;
     --pp-secondary-3: #004652;
     --pp-secondary-4: #D8EAD7;
@@ -455,6 +455,11 @@ nav.post-controls .actions button.create {
     color: var(--pp-secondary-1);
 }
 
+// retrait de "Welcome to the community" banner 
+.blocks.--top {
+    display:none!important;
+}
+
 /* Mobile */
 
 @media (max-width: 768px) {
@@ -553,11 +558,6 @@ nav.post-controls .actions button.create {
     // fix reply button on topics
     #topic-footer-buttons {
         padding-right: 1rem;
-    }
-
-    // retrait de "Welcome to the community" banner 
-    .blocks.--top {
-        display:none!important;
     }
     
 }
