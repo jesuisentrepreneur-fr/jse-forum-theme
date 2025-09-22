@@ -29,7 +29,6 @@ export default class CentralCategories extends Component {
 
   <template>
     <div class="c-categories">
-      coucou
       {{#each this.categories as |category|}}
         {{! template-lint-disable no-invalid-interactive }}
         <div

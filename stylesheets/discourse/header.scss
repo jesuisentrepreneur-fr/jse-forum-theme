@@ -39,6 +39,10 @@
   //   display: none;
   // }
 
+  .blocks.--top {
+    display:none!important;
+  }
+
   .home-logo-wrapper-outlet {
     display: flex;
     grid-area: logo;
