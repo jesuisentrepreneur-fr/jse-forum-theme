@@ -554,5 +554,10 @@ nav.post-controls .actions button.create {
     #topic-footer-buttons {
         padding-right: 1rem;
     }
+
+    // retrait de "Welcome to the community" banner 
+    .blocks.--top {
+        display:none!important;
+    }
     
 }
