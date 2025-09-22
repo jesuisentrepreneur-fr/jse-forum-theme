@@ -90,20 +90,20 @@ input[type=email], input[type=url], input[type=search], input[type=tel], input[t
     width: auto;
 }
 
-// Bouton se connecter
-.d-header .login-button {
-    color: var(--pp-grey-900);
-    background-color: transparent;
-}
+// // Bouton se connecter
+// .d-header .login-button {
+//     color: var(--pp-grey-900);
+//     background-color: transparent;
+// }
 
-.d-header .login-button:hover {
-    color: var(--pp-secondary-1);
-    background-color: transparent;
-}
+// .d-header .login-button:hover {
+//     color: var(--pp-secondary-1);
+//     background-color: transparent;
+// }
 
-.d-header .login-button .d-icon {
-    display: none;
-}
+// .d-header .login-button .d-icon {
+//     display: none;
+// }
 
 // Bouton s'inscrire
 .d-header .signup-button {
