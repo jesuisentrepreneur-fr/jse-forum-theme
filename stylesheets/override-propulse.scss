@@ -464,6 +464,17 @@ nav.post-controls .actions button.create {
 /* Mobile */
 
 @media (max-width: 768px) {
+    .d-header > .wrap > .contents {
+        & > :nth-child(1) {
+            order: 4; 
+        }
+    } 
+
+    #search-button {
+        // retrait du bouton search dans la navbar en haut
+        display: none;
+    }
+
     .c-user-content {
         max-width: auto!important;
     }
