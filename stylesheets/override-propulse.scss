@@ -483,9 +483,9 @@ nav.post-controls .actions button.create {
             order: 4; 
         }
     } 
-    
-    .header-sidebar-toggle button {
-        margin: 0;
+
+    .header-sidebar-toggle > .btn {
+        margin: 0!important;
     }
 
     #search-button {
