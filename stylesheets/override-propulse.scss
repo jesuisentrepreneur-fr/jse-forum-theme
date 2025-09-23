@@ -53,6 +53,10 @@
 
 /* CSS Personnalisé */
 
+#create-topic {
+    width: 210px;
+}
+
 // Fond du site en gris
 html, body {
   background-color: var(--pp-grey-200);
@@ -465,6 +469,10 @@ nav.post-controls .actions button.create {
 /* Mobile */
 
 @media (max-width: 768px) {
+    .d-header #site-logo {
+        margin-right: 12px;
+    }
+
     .d-header > .wrap > .contents {
         & > :nth-child(1) {
             order: 4; 
