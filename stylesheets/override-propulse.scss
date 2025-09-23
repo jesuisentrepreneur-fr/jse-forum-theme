@@ -479,8 +479,8 @@ nav.post-controls .actions button.create {
     }
 
     .d-header > .wrap > .contents {
-        & > :nth-child(1) {
-            order: 4; 
+        & > .header-sidebar-toggle {
+            order: 1; 
         }
     } 
 
