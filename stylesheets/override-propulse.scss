@@ -57,6 +57,11 @@
     width: 210px;
 }
 
+#main-outlet {
+    width: 100%;
+    overflow: hidden;
+}
+
 // Fond du site en gris
 html, body {
   background-color: var(--pp-grey-200);
