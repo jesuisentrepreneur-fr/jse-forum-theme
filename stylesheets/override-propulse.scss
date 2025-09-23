@@ -479,10 +479,14 @@ nav.post-controls .actions button.create {
     }
 
     .d-header > .wrap > .contents {
-        & > :nth-child(1) {
+        & > .header-sidebar-toggle, .d-header-icons {
             order: 4; 
         }
     } 
+
+    .header-sidebar-toggle > .btn {
+        margin: 0!important;
+    }
 
     #search-button {
         // retrait du bouton search dans la navbar en haut
