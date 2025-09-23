@@ -479,7 +479,7 @@ nav.post-controls .actions button.create {
     }
 
     .d-header > .wrap > .contents {
-        & > .header-sidebar-toggle {
+        & > .header-sidebar-toggle, #toggle-hamburger-menu {
             order: 1; 
         }
     } 
