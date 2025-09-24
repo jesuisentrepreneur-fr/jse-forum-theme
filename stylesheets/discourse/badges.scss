@@ -4,6 +4,11 @@
   .badge-category {
     gap: 0.25rem;
     align-items: center;
+  }
+
+  .badge-category.--style-square {
+    gap: 0.25rem;
+    align-items: center;
 
     &__name {
       color: var(--neutral-10);
@@ -27,7 +32,7 @@
     }
 
     .badge-category::before {
-      // content: "📁";
+      //content: "📁";
     }
   }
 }
