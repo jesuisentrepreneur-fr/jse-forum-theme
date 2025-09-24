@@ -189,9 +189,10 @@
 
       .topic-avatar {
         position: sticky;
-        top: calc(
-          var(--header-offset) + 1rem
-        ) !important; // why is sticky conditional?
+        top: 0;
+        // top: calc(
+        //   var(--header-offset) + 1rem
+        // ) !important; // why is sticky conditional?
         float: unset;
         width: unset;
         margin: 0;
