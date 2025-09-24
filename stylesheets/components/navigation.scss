@@ -434,9 +434,9 @@ body:not(.admin-interface) {
     position: relative;
     grid-area: edit;
 
-    [aria-hidden="true"] {
-      display: none;
-    }
+    // [aria-hidden="true"] {
+    //   display: none;
+    // }
   }
 }
 

@@ -55,6 +55,12 @@
 
 #create-topic {
     width: 210px;
+    order: 4;
+    background-color: var(--pp-secondary-1);
+    color: var(--pp-grey-000);
+    & .d-icon {
+        color: var(--pp-grey-000);
+    }
 }
 
 #main-outlet {
@@ -152,9 +158,23 @@ input[type=email], input[type=url], input[type=search], input[type=tel], input[t
     margin-top: 0;
 }
 
+.top-menu {
+    & .menu-item {
+        font-size: 16px; 
+    }
+    & .submenu-link {
+        font-size: 16px; 
+    }
+    & .menu-content {
+        margin: 0;
+        padding: 0 calc(64px - 0.5em)!important;
+    }
+}
+
 // Custom header
 .d-header-wrap {
     width: 100vw;
+    position: sticky;
 }
 
 body.has-sidebar-page .d-header .wrap {
@@ -295,7 +315,7 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
 }
 
 .fk-d-button-tooltip #create-topic .d-icon {
-    color: var(--pp-grey-000);
+    color: var(--pp-grey-000)!important;
 }
 
 // Ajuster la grid template
@@ -590,4 +610,9 @@ nav.post-controls .actions button.create {
         padding-right: 1rem;
     }
     
+    .top-menu {
+        & .menu-content {
+            padding: 0 calc(24px - 0.5em)!important;
+        }
+    }
 }

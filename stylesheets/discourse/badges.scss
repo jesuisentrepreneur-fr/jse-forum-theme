@@ -16,18 +16,18 @@
     }
 
     &::before {
-      content: "📁";
+      // content: "📁";
       display: flex;
       align-items: center;
       justify-content: center;
       width: 1.25rem;
       height: 1rem;
       font-size: 1rem;
-      background: none;
+      // background: none;
     }
 
     .badge-category::before {
-      content: "📁";
+      //content: "📁";
     }
   }
 }
