@@ -1,15 +1,9 @@
 .badge-category__wrapper {
   font-size: inherit;
-
-  .badge-category {
-    gap: 0.25rem;
-    align-items: center;
-  }
+  gap: 0.25rem;
+  align-items: center;
 
   .badge-category.--style-square {
-    gap: 0.25rem;
-    align-items: center;
-
     &__name {
       color: var(--neutral-10);
     }
