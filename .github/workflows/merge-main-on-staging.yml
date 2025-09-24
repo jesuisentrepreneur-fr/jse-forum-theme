@@ -1,0 +1,18 @@
+name: "Merge main -> staging"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Merge main -> staging
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: staging
+          github_token: ${{ github.token }}
