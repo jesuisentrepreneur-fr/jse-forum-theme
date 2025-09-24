@@ -58,6 +58,9 @@
     order: 4;
     background-color: var(--pp-secondary-1);
     color: var(--pp-grey-000);
+    & .d-icon {
+        color: var(--pp-grey-000);
+    }
 }
 
 #main-outlet {
