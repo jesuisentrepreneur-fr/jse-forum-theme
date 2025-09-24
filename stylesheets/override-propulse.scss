@@ -156,7 +156,12 @@ input[type=email], input[type=url], input[type=search], input[type=tel], input[t
 }
 
 .top-menu {
-    font-size: 16px!important;
+    & .menu-item {
+        font-size: 16px; 
+    }
+    & .submenu-link {
+        font-size: 16px; 
+    }
 }
 
 // Custom header
@@ -299,7 +304,6 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
 // Ajuster la couleur du bouton "create topic"
 .fk-d-button-tooltip #create-topic {
     color: var(--pp-grey-000);
-    //
     background-color: var(--pp-secondary-1);
 }
 
