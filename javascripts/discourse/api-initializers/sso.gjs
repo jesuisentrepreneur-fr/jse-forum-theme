@@ -9,7 +9,7 @@ export default apiInitializer((api) => {
     if (!api.getCurrentUser() && document?.cookie?.includes(`isAuthenticated=true`)) {
         // Redirect to the SSO login initiation route
         console.log("Cookie found, redirecting...");
-        window.location.href = `https://forum.propulsebyca.fr/session/sso?return_path=/`;
+        window.location.href = `https://staging-forum.propulsebyca.fr/session/sso?return_path=/`;
     }
     
     
@@ -65,9 +65,9 @@ export default apiInitializer((api) => {
                 }
                 
                 // changer le href
-                menuProfilePreferences.href = "https://compte.propulsebyca.fr/account-details?source=FORUM";
+                menuProfilePreferences.href = "https://staging-compte.propulsebyca.fr/account-details?source=FORUM";
                 menuProfilePreferences.onclick = function() {
-                    window.location = "https://compte.propulsebyca.fr/account-details?source=FORUM";
+                    window.location = "https://staging-compte.propulsebyca.fr/account-details?source=FORUM";
                 }
             }
 
