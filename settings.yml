@@ -193,18 +193,7 @@ blocks_top:
     [
       {
         "blocks":
-          [
-            {
-              "ctas":
-                [
-                  {
-                    "url": "/about",
-                    "label": "Learn more",
-                    "style": "primary",
-                  },
-                ],
-            },
-          ],
+          [],
       },
     ]
   type: objects
