@@ -43,9 +43,6 @@ body:not(.admin-interface) {
       }
 
       [data-list-item-name="Chat"],
-      [data-list-item-name="Tags"] {
-        display: flex;
-      }
 
       .sidebar-sections {
         display: contents;
@@ -176,7 +173,6 @@ body:not(.admin-interface) {
 
     &[data-section-name="chat-channels"],
     &[data-section-name="chat-dms"],
-    &[data-section-name="tags"],
     &[data-section-name="messages"] {
       display: none;
     }
@@ -213,8 +209,7 @@ body:not(.admin-interface) {
     }
   }
 
-  [data-link-name="all-categories"],
-  [data-link-name="all-tags"] {
+  [data-link-name="all-categories"]{
     .d-icon {
       height: 0.75em; // a little too large by default
     }
@@ -235,7 +230,6 @@ body:not(.admin-interface) {
         &[data-section-name="categories"],
         &[data-section-name="chat-channels"],
         &[data-section-name="chat-dms"],
-        &[data-section-name="tags"],
         &[data-section-name="messages"] {
           display: none;
         }
@@ -280,7 +274,6 @@ body:not(.admin-interface) {
         }
       }
 
-      [data-list-item-name="Tags"],
       [data-list-item-name="Customize this section"],
       .sidebar-more-section-links-details-summary {
         display: none;
