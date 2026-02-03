@@ -50,9 +50,6 @@ blocks:
             name:
               type: enum
               choices:
-                - top_contributors
-                - top_topics
-                - time
                 - profile
                 - online
                 - cta
