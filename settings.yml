@@ -17,23 +17,6 @@ blocks:
   default:
     [
       { "order": 1, "blocks": [{ "name": "profile", "size": "4w" }] },
-      {
-        "order": 3,
-        "blocks":
-          [
-            {
-              "name": "top_topics",
-              "size": "4w",
-              "count": 10,
-              "period": "quarterly",
-            },
-          ],
-      },
-      {
-        "order": 4,
-        "blocks":
-          [{ "name": "top_contributors", "size": "4w", "period": "quarterly" }],
-      },
     ]
   type: objects
   schema:
@@ -104,47 +87,6 @@ blocks:
                 - weekly
                 - daily
           allOf:
-            - if:
-                properties:
-                  block:
-                    const: top_contributors
-              then:
-                properties:
-                  size:
-                    choices:
-                      - 2x2
-                      - 4x4
-                      - 4w
-                    default: 4w
-                  period:
-                    default: weekly
-            - if:
-                properties:
-                  block:
-                    const: top_topics
-              then:
-                properties:
-                  size:
-                    choices:
-                      - 2x2
-                      - 4x4
-                      - 4w
-                    default: 4w
-                  period:
-                    default: weekly
-            - if:
-                properties:
-                  block:
-                    const: time
-              then:
-                properties:
-                  size:
-                    choices:
-                      - 2x1
-                      - 2x2
-                    default: 2x1
-                  period:
-                    type: null
             - if:
                 properties:
                   block:
