@@ -77,12 +77,6 @@ table.topic-list:not(.bookmark-list) {
           }
         }
 
-        // end
-        &.num,
-        &.posters {
-          display: none;
-        }
-
         &.main-link {
           display: contents;
 
