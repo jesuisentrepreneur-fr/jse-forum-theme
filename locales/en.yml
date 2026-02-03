@@ -12,7 +12,5 @@ en:
     category:
       view_all_topics: "View all topics (%{count})"
   blocks:
-    online:
-      label: "online"
     profile:
       hello: "Hi, %{name}!"

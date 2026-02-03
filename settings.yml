@@ -34,7 +34,6 @@ blocks:
               type: enum
               choices:
                 - profile
-                - online
                 - cta
               required: true
             size:
@@ -98,19 +97,6 @@ blocks:
                       - 2x2
                       - 4x4
                     default: 2x2
-                  period:
-                    type: null
-            - if:
-                properties:
-                  block:
-                    const: online
-              then:
-                properties:
-                  size:
-                    choices:
-                      - 1x1
-                      - 2x1
-                    default: 1x1
                   period:
                     type: null
 
