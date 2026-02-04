@@ -1,3 +1,19 @@
+.topic-list thead tr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topic-list thead th {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--neutral-100);
+  border: none;
+  font-weight: 600;
+}
 table.topic-list:not(.bookmark-list) {
   display: contents;
 
@@ -90,23 +106,7 @@ table.topic-list:not(.bookmark-list) {
           }
 
           .link-bottom-line {
-            display: contents;
-
-            .badge-category__wrapper {
-              display: none;
-              grid-area: category;
-              padding-bottom: 0.25rem;
-
-              .badge-category {
-                &::before {
-                  content: unset;
-                }
-
-                .badge-category__name {
-                  color: var(--g-neutral-30);
-                }
-              }
-            }
+            display: none;
           }
         }
       }
