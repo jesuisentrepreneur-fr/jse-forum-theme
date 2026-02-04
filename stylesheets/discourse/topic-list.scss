@@ -1,40 +1,14 @@
-.topic-list thead tr,
-.topic-list:not(.bookmark-list) tbody.topic-list-body tr.topic-list-item {
-  display: grid;
-  grid-template-columns: 2.5rem 1fr 7rem 5rem 5rem 3.5rem;
-  align-items: center;
-  gap: 0;
-}
-
-.topic-list thead th,
-.topic-list:not(.bookmark-list) td.topic-list-data {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0.5rem 0.5rem;
-  border: none;
-  background: var(--neutral-100);
-}
-
-.topic-list thead th:nth-child(1),
-.topic-list:not(.bookmark-list) td.topic-list-data:nth-child(1) { justify-content: center; }
-.topic-list thead th:nth-child(6),
-.topic-list:not(.bookmark-list) td.topic-list-data:nth-child(6) { justify-content: flex-end; }
 table.topic-list:not(.bookmark-list) {
-  display: contents;
+  // display: contents; 
 
   tbody.topic-list-body {
-    container-type: inline-size;
-    display: flex;
-    flex-direction: column;
     border: 0;
 
     tr.topic-list-item-separator {
-      display: flex;
+      // display: flex;
       background: var(--neutral-100);
 
       td.topic-list-data {
-        flex: 1;
         max-width: unset;
         padding: 1rem 0;
         border-top: var(--border-inner);
@@ -42,30 +16,28 @@ table.topic-list:not(.bookmark-list) {
         span {
           color: var(--neutral-50);
           background-color: transparent;
-
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 1rem;
+          // display: flex;
+          // flex-direction: row;
+          // align-items: center;
+          // gap: 1rem;
 
     tr.topic-list-item {
       cursor: pointer;
       position: relative;
-      display: grid;
-      grid-template-areas: "avatar author actions" "avatar category actions" "avatar title actions" "avatar tags actions" "avatar content actions" "avatar replies actions";
-      grid-template-columns: 2rem auto auto;
-      gap: 0 1rem;
+      // display: grid;
+      // grid-template-areas: ...;
+      // grid-template-columns: ...;
+      // gap: ...;
       padding: 1rem;
-            display: flex;
       border-top: var(--border-inner);
       border-bottom: 0;
       animation: none;
-            max-width: unset;
-            padding: 0 0.5rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 0.5rem;
+      // max-width: unset;
+      // padding: 0 0.5rem;
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      // gap: 0.5rem;
             .pull-left {
               display: none;
             }
@@ -123,8 +95,8 @@ table.topic-list:not(.bookmark-list) {
       }
 
       @container (max-width: 32rem) {
-        grid-template-areas: "avatar author" "avatar category" "avatar title" "avatar tags" "avatar content" "avatar replies" "avatar actions" "avatar excerpt";
-        grid-template-columns: 2rem auto;
+    // grid-template-areas: ...;
+    // grid-template-columns: ...;
 
         .topic__actions {
           justify-self: flex-start;
