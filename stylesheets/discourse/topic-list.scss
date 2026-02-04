@@ -77,18 +77,6 @@ table.topic-list:not(.bookmark-list) {
           }
         }
 
-        // end
-        &.num,
-        &.posters,
-        &.last-posted {
-          display: inline-flex;
-          align-items: center;
-          justify-content: flex-end;
-          margin-left: auto;
-          margin-right: 0;
-          min-width: 3em;
-        }
-
         &.main-link {
           display: contents;
 
