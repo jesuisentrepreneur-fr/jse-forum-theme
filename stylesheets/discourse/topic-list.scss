@@ -1,5 +1,12 @@
+td.topic-list-data:last-child,
+th:last-child {
+  text-align: right;
+}
+.topic__actions {
+  justify-content: flex-end;
+}
 table.topic-list:not(.bookmark-list) {
-  display: contents; 
+  // display: contents; 
 
   tbody.topic-list-body {
     border: 0;
@@ -81,10 +88,6 @@ table.topic-list:not(.bookmark-list) {
               padding: 0;
               color: var(--neutral-10);
             }
-          }
-
-          .link-bottom-line {
-            display: none;
           }
         }
       }
@@ -375,4 +378,8 @@ table.topic-list
   .header-title .event-date {
     border-color: var(--primary-low);
   }
+}
+
+.link-bottom-line {
+  display: none;
 }
