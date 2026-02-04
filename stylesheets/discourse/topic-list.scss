@@ -21,10 +21,10 @@ table.topic-list:not(.bookmark-list) {
           color: var(--neutral-50);
           background-color: transparent;
 
-          @include body-medium;
-        }
-      }
-    }
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
 
     tr.topic-list-item {
       cursor: pointer;
@@ -34,36 +34,33 @@ table.topic-list:not(.bookmark-list) {
       grid-template-columns: 2rem auto auto;
       gap: 0 1rem;
       padding: 1rem;
-      background: var(--neutral-100);
+            display: flex;
       border-top: var(--border-inner);
       border-bottom: 0;
       animation: none;
-
-      @include hover($opacity: 0.02);
-
-      .docs-results & {
-        display: flex;
-      }
-
-      td.topic-list-data {
-        // mobile overrides
-        max-width: unset;
-        padding: 0;
-
-        .pull-left {
-          display: none;
-        }
-
-        .topic-item-metadata {
-          display: contents;
-
-          & > *:not(.main-link) {
-            display: none;
-          }
-
-          .main-link {
-            width: unset;
-            color: var(--neutral-10);
+            max-width: unset;
+            padding: 0 0.5rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+            .pull-left {
+              display: none;
+            }
+            .topic-item-metadata {
+              display: contents;
+              & > *:not(.main-link) {
+                display: none;
+              }
+              .main-link {
+                width: unset;
+                color: var(--neutral-10);
+                @include body-large;
+                a {
+                  color: inherit;
+                }
+              }
+            }
 
             @include body-large;
 
