@@ -1,14 +1,14 @@
-td.topic-list-data:last-child,
-th:last-child {
-  text-align: right;
-}
-.topic__actions {
-  justify-content: flex-end;
-}
 table.topic-list:not(.bookmark-list) {
-  display: contents; 
+  display: contents;
+
+  thead.topic-list-header {
+    display: none;
+  }
 
   tbody.topic-list-body {
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
     border: 0;
 
     tr.topic-list-item-separator {
@@ -16,6 +16,7 @@ table.topic-list:not(.bookmark-list) {
       background: var(--neutral-100);
 
       td.topic-list-data {
+        flex: 1;
         max-width: unset;
         padding: 1rem 0;
         border-top: var(--border-inner);
@@ -23,45 +24,50 @@ table.topic-list:not(.bookmark-list) {
         span {
           color: var(--neutral-50);
           background-color: transparent;
-          // display: flex;
-          // flex-direction: row;
-          // align-items: center;
-          // gap: 1rem;
+
+          @include body-medium;
+        }
+      }
+    }
 
     tr.topic-list-item {
       cursor: pointer;
       position: relative;
-      // display: grid;
-      // grid-template-areas: ...;
-      // grid-template-columns: ...;
-      // gap: ...;
+      display: grid;
+      grid-template-areas: "avatar author actions" "avatar category actions" "avatar title actions" "avatar tags actions" "avatar content actions" "avatar replies actions";
+      grid-template-columns: 2rem auto auto;
+      gap: 0 1rem;
       padding: 1rem;
+      background: var(--neutral-100);
       border-top: var(--border-inner);
       border-bottom: 0;
       animation: none;
-      // max-width: unset;
-      // padding: 0 0.5rem;
-      // display: flex;
-      // flex-direction: row;
-      // align-items: center;
-      // gap: 0.5rem;
-            .pull-left {
-              display: none;
-            }
-            .topic-item-metadata {
-              display: contents;
-              & > *:not(.main-link) {
-                display: none;
-              }
-              .main-link {
-                width: unset;
-                color: var(--neutral-10);
-                @include body-large;
-                a {
-                  color: inherit;
-                }
-              }
-            }
+
+      @include hover($opacity: 0.02);
+
+      .docs-results & {
+        display: flex;
+      }
+
+      td.topic-list-data {
+        // mobile overrides
+        max-width: unset;
+        padding: 0;
+
+        .pull-left {
+          display: none;
+        }
+
+        .topic-item-metadata {
+          display: contents;
+
+          & > *:not(.main-link) {
+            display: none;
+          }
+
+          .main-link {
+            width: unset;
+            color: var(--neutral-10);
 
             @include body-large;
 
@@ -89,6 +95,26 @@ table.topic-list:not(.bookmark-list) {
               color: var(--neutral-10);
             }
           }
+
+          .link-bottom-line {
+            display: contents;
+
+            .badge-category__wrapper {
+              display: none;
+              grid-area: category;
+              padding-bottom: 0.25rem;
+
+              .badge-category {
+                &::before {
+                  content: unset;
+                }
+
+                .badge-category__name {
+                  color: var(--g-neutral-30);
+                }
+              }
+            }
+          }
         }
       }
 
@@ -98,8 +124,8 @@ table.topic-list:not(.bookmark-list) {
       }
 
       @container (max-width: 32rem) {
-    // grid-template-areas: ...;
-    // grid-template-columns: ...;
+        grid-template-areas: "avatar author" "avatar category" "avatar title" "avatar tags" "avatar content" "avatar replies" "avatar actions" "avatar excerpt";
+        grid-template-columns: 2rem auto;
 
         .topic__actions {
           justify-self: flex-start;
@@ -114,6 +140,7 @@ table.topic-list:not(.bookmark-list) {
 .topic {
   &__avatar {
     grid-area: avatar;
+
     a {
       position: relative;
       display: block;
@@ -378,8 +405,4 @@ table.topic-list
   .header-title .event-date {
     border-color: var(--primary-low);
   }
-}
-
-.link-bottom-line {
-  display: none;
 }
