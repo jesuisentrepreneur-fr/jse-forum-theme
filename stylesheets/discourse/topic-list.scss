@@ -34,14 +34,13 @@ table.topic-list:not(.bookmark-list) {
       cursor: pointer;
       position: relative;
       display: grid;
-      grid-template-areas: 
-        "avatar author actions",
-        "avatar category actions",
-        "avatar title actions",
-        "avatar tags actions",
-        "avatar content actions",
-        "avatar replies actions";
-      grid-template-columns: 2rem 1fr auto;
+      grid-template-areas:
+        "avatar author actions"
+        "avatar category actions"
+        "avatar title replies actions"
+        "avatar tags actions"
+        "avatar content actions";
+      grid-template-columns: 2rem 1fr auto auto;
       gap: 0 1rem;
       padding: 1rem;
       background: var(--neutral-100);
@@ -91,6 +90,11 @@ table.topic-list:not(.bookmark-list) {
           .link-top-line {
             grid-area: title;
             margin-top: 0.25rem;
+            align-self: center;
+            // Pour forcer l'affichage en ligne
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
 
             .topic-post-badges {
               line-height: 0;
