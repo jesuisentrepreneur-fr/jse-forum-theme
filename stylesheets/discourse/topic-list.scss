@@ -1,10 +1,14 @@
 table.topic-list:not(.bookmark-list) {
   display: contents;
 
+  .topic__author {
+    display: none !important;
+  }
+/*
   thead.topic-list-header {
     display: none;
   }
-/*
+
     a {
       position: relative;
       display: block;
