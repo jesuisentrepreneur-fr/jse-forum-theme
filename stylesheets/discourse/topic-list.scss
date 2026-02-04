@@ -1,19 +1,25 @@
-.topic-list thead tr {
-  display: flex;
-  flex-direction: row;
+.topic-list thead tr,
+.topic-list:not(.bookmark-list) tbody.topic-list-body tr.topic-list-item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 7rem 5rem 5rem 3.5rem;
   align-items: center;
-  gap: 1rem;
+  gap: 0;
 }
 
-.topic-list thead th {
-  padding: 0 0.5rem;
+.topic-list thead th,
+.topic-list:not(.bookmark-list) td.topic-list-data {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: var(--neutral-100);
+  padding: 0.5rem 0.5rem;
   border: none;
-  font-weight: 600;
+  background: var(--neutral-100);
 }
+
+.topic-list thead th:nth-child(1),
+.topic-list:not(.bookmark-list) td.topic-list-data:nth-child(1) { justify-content: center; }
+.topic-list thead th:nth-child(6),
+.topic-list:not(.bookmark-list) td.topic-list-data:nth-child(6) { justify-content: flex-end; }
 table.topic-list:not(.bookmark-list) {
   display: contents;
 
