@@ -1,8 +1,26 @@
 table.topic-list:not(.bookmark-list) {
   display: contents;
 
-  .topic__author {
+  .topic__author .topic__avatar .link-bottom-line {
     display: none !important;
+  }
+  .topic__actions {
+    display: flex;
+    grid-area: actions;
+    gap: 0.5rem;
+    place-self: center flex-end;
+    margin: 0;
+    padding-left: 1rem;
+    list-style: none;
+
+    .topic__reply-button .d-icon {
+      color: var(--neutral-10);
+    }
+
+    button,
+    a {
+      @include button($size: sm);
+    }
   }
 /*
   thead.topic-list-header {
