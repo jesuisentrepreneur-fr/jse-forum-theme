@@ -5,7 +5,7 @@ table.topic-list:not(.bookmark-list) {
     display: grid;
     width: 100%;
     grid-template-areas:  "subject replies activity";
-    grid-template-columns: 4rem 4rem 4rem;
+    grid-template-columns: 4fr 1fr 1fr;
     tr {
       display: contents;
     }
@@ -314,7 +314,7 @@ table.topic-list:not(.bookmark-list) {
 // UX PREFERENCE
 
 @if $topic-list-show-usernames == "false" {
-  body:not(.user-messages-page) {
+  body:not(.user-messages-page) tbody.topic-list-body tr.topic-list-item {
     .topic__username,
     .topic__last-reply > span:not(.relative-date) {
       display: none;
@@ -405,7 +405,7 @@ body:not(.user-messages-page) {
 }
 
 td.num.views.topic-list-data {
-    display: none;
+  display: none;
 }
 
 .topic-list .num .badge-posts {
