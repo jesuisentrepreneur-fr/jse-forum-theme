@@ -379,6 +379,14 @@ body:not(.user-messages-page) {
   }
 }
 
+td.num.views.topic-list-data {
+    display: none;
+}
+
+.topic-list .num .badge-posts {
+  display: contents;
+}
+
 // events plugin
 table.topic-list
   tbody.topic-list-body
