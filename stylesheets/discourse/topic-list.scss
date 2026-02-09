@@ -313,22 +313,18 @@ table.topic-list:not(.bookmark-list) {
 
 // UX PREFERENCE
 
-@if $topic-list-show-usernames == "false" {
-  body:not(.user-messages-page) tbody.topic-list-body tr.topic-list-item {
-    .topic__username,
-    .topic__last-reply > span:not(.relative-date) {
-      display: none;
-    }
+// @if $topic-list-show-usernames == "false" {
+//   body:not(.user-messages-page) {
+//     .topic__username,
+//     .topic__last-reply > span:not(.relative-date) {
+//       display: none;
+//     }
 
-    .topic__author .topic__metadata {
-      @include body-small;
-    }
-
-    tr.topic-list-item {
-      grid-template-columns: 2rem auto 4rem 4rem  6rem;
-    }
-  }
-}
+//     .topic__author .topic__metadata {
+//       @include body-small;
+//     }
+//   }
+// }
 
 body:not(.user-messages-page) {
   .topic-excerpt {
