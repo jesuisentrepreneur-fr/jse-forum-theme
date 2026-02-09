@@ -2,7 +2,25 @@ table.topic-list:not(.bookmark-list) {
   display: contents;
 
   thead.topic-list-header {
-    display: none;
+    display: flex;
+    width: 100%;
+    tr {
+      display: flex;
+      width: 100%;
+    }
+    th {
+      flex: 1;
+    }
+    th.activity {
+      flex: 0.2;
+      text-align: end;
+    }
+    th.posts {
+      text-align: end;
+    }
+    th.views {
+      display: none;
+    }
   }
 
   tbody.topic-list-body {
@@ -35,7 +53,7 @@ table.topic-list:not(.bookmark-list) {
       position: relative;
       display: grid;
       grid-template-areas: "avatar author actions" "avatar category actions" "avatar title actions" "avatar content actions" "avatar replies actions";
-      grid-template-columns: 2rem auto 4rem 4rem 4rem 4rem;
+      grid-template-columns: 2rem auto 4rem 4rem 4rem 6rem;
       gap: 0 1rem;
       padding: 1rem;
       background: var(--neutral-100);
