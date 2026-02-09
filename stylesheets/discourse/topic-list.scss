@@ -2,20 +2,23 @@ table.topic-list:not(.bookmark-list) {
   display: contents;
 
   thead.topic-list-header {
-    display: flex;
+    display: grid;
     width: 100%;
+    grid-template-areas:  "subject replies activity";
+    grid-template-columns: 4rem 4rem 4rem;
     tr {
-      display: flex;
-      width: 100%;
+      display: contents;
     }
-    th {
-      flex: 1;
+    }
+    th.default {
+      grid-area: subject;
     }
     th.activity {
-      flex: 0.2;
+      grid-area: activity;
       text-align: end;
     }
     th.posts {
+      grid-area: replies;
       text-align: end;
     }
     th.views {
@@ -319,6 +322,10 @@ table.topic-list:not(.bookmark-list) {
 
     .topic__author .topic__metadata {
       @include body-small;
+    }
+
+    tr.topic-list-item {
+      grid-template-columns: 2rem auto 4rem 4rem  6rem;
     }
   }
 }
