@@ -55,7 +55,7 @@ table.topic-list:not(.bookmark-list) {
       cursor: pointer;
       position: relative;
       display: grid;
-      grid-template-areas: "avatar author posters numposters activity actions" "avatar category posters numposters activity actions" "avatar title posters numposters activity actions" "avatar content posters numposters activity actions" "avatar replies posters numposters activity actions";
+      grid-template-areas: "author numposters activity actions" "category numposters activity actions" "title numposters activity actions" "content numposters activity actions" "replies numposters activity actions";
       grid-template-columns: 2rem auto 4rem 4rem 4rem 6rem;
       gap: 0 1rem;
       padding: 1rem;
@@ -105,7 +105,6 @@ table.topic-list:not(.bookmark-list) {
 
           .link-top-line {
             grid-area: title;
-            margin-top: 0.25rem;
 
             .topic-post-badges {
               line-height: 0;
@@ -160,23 +159,7 @@ table.topic-list:not(.bookmark-list) {
 
 .topic {
   &__avatar {
-    grid-area: avatar;
-
-    a {
-      position: relative;
-      display: block;
-
-      img.avatar {
-        width: 2rem;
-        height: auto;
-      
-
-        .d-icon {
-          width: 0.75rem;
-          height: 0.75rem;
-        }
-      }
-    }
+    display: none;
   }
 
   &__author {
@@ -295,10 +278,11 @@ table.topic-list:not(.bookmark-list) {
     display: flex;
     grid-area: actions;
     gap: 0.5rem;
-    place-self: center flex-end;
+    place-self: self-start end;
     margin: 0;
     padding-left: 1rem;
     list-style: none;
+    margin-top: -0.2rem;
 
     .topic__reply-button .d-icon {
       color: var(--neutral-10);
@@ -311,7 +295,7 @@ table.topic-list:not(.bookmark-list) {
   }
 
   .posters {
-    grid-area: posters;;
+    display: none;
   }
   .posts {
     grid-area: numposters;
