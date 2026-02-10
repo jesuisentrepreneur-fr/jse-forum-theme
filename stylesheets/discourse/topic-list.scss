@@ -5,7 +5,7 @@ table.topic-list:not(.bookmark-list) {
     display: grid;
     width: 100%;
     grid-template-areas:  "subject replies activity";
-    grid-template-columns: auto 8rem 6rem;
+    grid-template-columns: auto 8rem 8rem 6rem;
     tr {
       display: contents;
     }
