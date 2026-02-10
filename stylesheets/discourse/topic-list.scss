@@ -144,14 +144,16 @@ table.topic-list:not(.bookmark-list) {
       }
 
       @container (max-width: 32rem) {
-        grid-template-areas: "avatar author" "avatar category" "avatar title" "avatar tags" "avatar content" "avatar replies" "avatar actions" "avatar excerpt";
-        grid-template-columns: 2rem auto;
+        grid-template-areas: "author" "category" "title" "tags" "content" "replies" "actions" "excerpt";
+        grid-template-columns: auto;
 
         .topic__actions {
           justify-self: flex-start;
           margin-top: 1rem;
           padding: 0;
         }
+        .activity, .posts {
+          display: none;
       }
     }
   }
