@@ -122,22 +122,20 @@ export default class PostPrimary extends Component {
         }}
       >
         <ul>
-          {{#each this.topic.posters as |poster index|}}
-            {{#if (eq index 0)}}
-              {{#if (eq poster.extras "latest")}}
-                <li>
-                  <UserLink @user={{poster.user}}>
-                    {{avatar poster.user imageSize="small"}}
-                  </UserLink>
-                </li>
-              {{/if}}
-            {{else}}
+          <li>
+            <UserLink @user={{get this.topic.posters "0.user"}}>
+              {{avatar (get this.topic.posters "0.user") imageSize="small"}}
+              <span class="topic__poster-label">Auteur</span>
+            </UserLink>
+          </li>
+          {{#each this.topic.posters as |poster|}}
+            {{#unless (eq poster.user.id (get this.topic.posters "0.user.id"))}}
               <li>
                 <UserLink @user={{poster.user}}>
                   {{avatar poster.user imageSize="small"}}
                 </UserLink>
               </li>
-            {{/if}}
+            {{/unless}}
           {{/each}}
         </ul>
 
