@@ -113,32 +113,31 @@ export default class PostPrimary extends Component {
       </div>
     {{/if}}
 
-    {{#unless (eq this.topic.posters.length 1)}}
-      <div
-        class={{if
-          (eq (get this.topic.posters "0.extras") "latest")
-          "topic__replies --reverse"
-          "topic__replies"
-        }}
-      >
-        <ul>
-          <li>
-            <UserLink @user={{get this.topic.posters "0.user"}}>
-              {{avatar (get this.topic.posters "0.user") imageSize="small"}}
-              <span class="topic__poster-label">Auteur</span>
-            </UserLink>
-          </li>
-          {{#each this.topic.posters as |poster|}}
-            {{#unless (eq poster.user.id (get this.topic.posters "0.user.id"))}}
-              <li>
-                <UserLink @user={{poster.user}}>
-                  {{avatar poster.user imageSize="small"}}
-                </UserLink>
-              </li>
-            {{/unless}}
-          {{/each}}
-        </ul>
+    <div
+      class={{if
+        (eq (get this.topic.posters "0.extras") "latest")
+        "topic__replies --reverse"
+        "topic__replies"
+      }}
+    >
+      <ul>
+        <li>
+          <UserLink @user={{get this.topic.posters "0.user"}}>
+            {{avatar (get this.topic.posters "0.user") imageSize="small"}}
+          </UserLink>
+        </li>
+        {{#each this.topic.posters as |poster|}}
+          {{#unless (eq poster.user.id (get this.topic.posters "0.user.id"))}}
+            <li>
+              <UserLink @user={{poster.user}}>
+                {{avatar poster.user imageSize="small"}}
+              </UserLink>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
 
+      {{#if this.topic.lastPostUrl}}
         <a href={{this.topic.lastPostUrl}} class="topic__last-reply">
           <span>
             {{htmlSafe
@@ -152,9 +151,9 @@ export default class PostPrimary extends Component {
             }}
           </span>
         </a>
+      {{/if}}
 
-      </div>
-    {{/unless}}
+    </div>
 
     <ul class="topic__actions">
       {{#unless (eq this.topic.like_count 0)}}
