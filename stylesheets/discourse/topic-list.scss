@@ -156,7 +156,7 @@ table.topic-list:not(.bookmark-list) {
           display: none;
         }
         table.topic-list:not(.bookmark-list) thead.topic-list-header {
-          display: none;
+          display: none !important;
         }
       }
     }
