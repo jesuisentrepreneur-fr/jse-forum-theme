@@ -5,7 +5,7 @@ table.topic-list:not(.bookmark-list) {
     display: grid;
     width: 100%;
     grid-template-areas:  "subject replies activity";
-    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-columns: auto 8rem 6rem;
     tr {
       display: contents;
     }
@@ -55,7 +55,7 @@ table.topic-list:not(.bookmark-list) {
       cursor: pointer;
       position: relative;
       display: grid;
-      grid-template-areas: "avatar author actions" "avatar category actions" "avatar title actions" "avatar content actions" "avatar replies actions";
+      grid-template-areas: "avatar author posters numposters activity actions" "avatar category posters numposters activity actions" "avatar title posters numposters activity actions" "avatar content posters numposters activity actions" "avatar replies posters numposters activity actions";
       grid-template-columns: 2rem auto 4rem 4rem 4rem 6rem;
       gap: 0 1rem;
       padding: 1rem;
@@ -309,22 +309,32 @@ table.topic-list:not(.bookmark-list) {
       @include button($size: sm);
     }
   }
+
+  .posters {
+    grid-area: posters;;
+  }
+  .posts {
+    grid-area: numposters;
+  }
+  .activity {
+    grid-area: activity;
+  }
 }
 
 // UX PREFERENCE
 
-// @if $topic-list-show-usernames == "false" {
-//   body:not(.user-messages-page) {
-//     .topic__username,
-//     .topic__last-reply > span:not(.relative-date) {
-//       display: none;
-//     }
+@if $topic-list-show-usernames == "false" {
+  body:not(.user-messages-page) {
+    .topic__username,
+    .topic__last-reply > span:not(.relative-date) {
+      display: none;
+    }
 
-//     .topic__author .topic__metadata {
-//       @include body-small;
-//     }
-//   }
-// }
+    .topic__author .topic__metadata {
+      @include body-small;
+    }
+  }
+}
 
 body:not(.user-messages-page) {
   .topic-excerpt {
