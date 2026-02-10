@@ -56,7 +56,7 @@ table.topic-list:not(.bookmark-list) {
       position: relative;
       display: grid;
       grid-template-areas: "author numposters activity actions" "category numposters activity actions" "title numposters activity actions" "content numposters activity actions" "replies numposters activity actions";
-      grid-template-columns: auto 4rem 4rem 6rem;
+      grid-template-columns: auto 2rem 6rem 6rem;
       gap: 0 1rem;
       padding: 1rem;
       background: var(--neutral-100);
