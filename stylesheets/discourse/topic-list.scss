@@ -152,7 +152,10 @@ table.topic-list:not(.bookmark-list) {
           margin-top: 1rem;
           padding: 0;
         }
-        .activity, .posts, .topic-list-header {
+        .activity, .posts {
+          display: none;
+        }
+        table.topic-list:not(.bookmark-list) thead.topic-list-header {
           display: none;
         }
       }
