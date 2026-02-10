@@ -155,9 +155,6 @@ table.topic-list:not(.bookmark-list) {
         .activity, .posts {
           display: none;
         }
-        table.topic-list:not(.bookmark-list) thead.topic-list-header {
-          display: none !important;
-        }
       }
     }
   }
