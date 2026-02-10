@@ -56,7 +56,7 @@ table.topic-list:not(.bookmark-list) {
       position: relative;
       display: grid;
       grid-template-areas: "author numposters activity actions" "category numposters activity actions" "title numposters activity actions" "content numposters activity actions" "replies numposters activity actions";
-      grid-template-columns: 2rem auto 4rem 4rem 4rem 6rem;
+      grid-template-columns: auto 4rem 4rem 6rem;
       gap: 0 1rem;
       padding: 1rem;
       background: var(--neutral-100);
@@ -154,6 +154,15 @@ table.topic-list:not(.bookmark-list) {
         }
       }
     }
+  }
+  .posters {
+    display: none;
+  }
+  .posts {
+    grid-area: numposters;
+  }
+  .activity {
+    grid-area: activity;
   }
 }
 
@@ -292,16 +301,6 @@ table.topic-list:not(.bookmark-list) {
     a {
       @include button($size: sm);
     }
-  }
-
-  .posters {
-    display: none;
-  }
-  .posts {
-    grid-area: numposters;
-  }
-  .activity {
-    grid-area: activity;
   }
 }
 
