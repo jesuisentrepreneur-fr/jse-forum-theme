@@ -200,6 +200,13 @@ table.topic-list:not(.bookmark-list) {
 
       .topic__category {
         color: var(--neutral-30);
+        .badge-category__wrapper .badge-category.--style-square {
+          align-items: inherit;
+        }
+        .badge-category__wrapper .badge-category::before {
+          width: 0.6rem !important;
+          height: 0.6rem !important;
+        }
       }
     }
   }
