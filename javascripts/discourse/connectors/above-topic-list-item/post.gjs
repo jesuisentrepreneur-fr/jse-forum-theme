@@ -83,6 +83,7 @@ export default class PostPrimary extends Component {
 
         {{#unless this.discovery.category}}
           {{#if this.topic.category.name}}
+            {{categoryBadge this.topic.category}}
             <a
               href="/c/{{this.topic.category.slug}}/{{this.topic.category.id}}"
               title={{this.topic.category.description_text}}
@@ -91,7 +92,6 @@ export default class PostPrimary extends Component {
                 (if this.topic.category.read_restricted "--locked")
               }}
             >
-              {{categoryBadge this.topic.category}}
               {{this.topic.category.name}}
             </a>
           {{/if}}
