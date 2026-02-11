@@ -92,9 +92,8 @@ export default class PostPrimary extends Component {
                 (if this.topic.category.read_restricted "--locked")
               }}
             >
-              {{categoryBadge this.topic.category}}
-              {{this.topic.category.name}}
-            </a>
+              
+            </a>{{categoryBadge this.topic.category}}
           {{/if}}
         {{/unless}}
       </div>
