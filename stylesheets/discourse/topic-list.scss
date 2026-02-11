@@ -24,7 +24,7 @@ table.topic-list:not(.bookmark-list) {
     th.views {
       grid-area: views;
       text-align: end;
-      display: contents;
+      display: inline;
     }
   }
 
@@ -376,7 +376,7 @@ body:not(.user-messages-page) {
 
 td.num.views.topic-list-data {
   grid-area: views;
-  display: contents;
+  display: inline;
 }
 
 .topic-list .num .badge-posts {
