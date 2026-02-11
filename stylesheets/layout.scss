@@ -142,7 +142,6 @@ body {
         border: var(--border-outer);
         border-radius: var(--rounded-lg);
         width: 100%;
-        overflow: hidden;
 
         @include viewport.until(lg) {
           margin-top: 1rem;

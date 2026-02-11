@@ -180,7 +180,7 @@
 
 .topic-post {
   border: 0;
-  border-bottom: var(--border-inner);
+  border-bottom: 2px solid var(--neutral-60);
 
   article.onscreen-post {
     .row {
@@ -327,6 +327,7 @@
       max-width: unset;
       padding: 1em;
       border-top: 2rem solid var(--neutral-70);
+      padding-top: 2rem;
     }
 
     &__list-title {
