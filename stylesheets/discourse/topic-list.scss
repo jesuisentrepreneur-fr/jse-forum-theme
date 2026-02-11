@@ -200,12 +200,10 @@ table.topic-list:not(.bookmark-list) {
 
       .topic__category {
         color: var(--neutral-30);
-        .topic__author .topic__metadata .topic__category .badge-category__wrapper .badge-category::before {
-          align-items: self-end;
-        }
         .badge-category__wrapper .badge-category::before {
           width: 0.6rem !important;
           height: 0.6rem !important;
+          align-items: self-end;
         }
       }
     }
