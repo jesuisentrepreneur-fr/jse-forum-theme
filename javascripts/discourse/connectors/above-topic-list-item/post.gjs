@@ -17,6 +17,7 @@ import replaceEmoji from "discourse/helpers/replace-emoji";
 import { i18n } from "discourse-i18n";
 import LikeToggle from "../../components/like-toggle";
 import endsWithEllipsis from "../../helpers/ends-with-ellipsis";
+import categoryBadge from "../../helpers/category-badge";
 
 export default class PostPrimary extends Component {
   @service router;
@@ -83,7 +84,6 @@ export default class PostPrimary extends Component {
 
         {{#unless this.discovery.category}}
           {{#if this.topic.category.name}}
-            {{categoryBadge this.topic.category}}
             <a
               href="/c/{{this.topic.category.slug}}/{{this.topic.category.id}}"
               title={{this.topic.category.description_text}}
@@ -92,6 +92,7 @@ export default class PostPrimary extends Component {
                 (if this.topic.category.read_restricted "--locked")
               }}
             >
+              {{categoryBadge this.topic.category}}
               {{this.topic.category.name}}
             </a>
           {{/if}}
