@@ -17,7 +17,7 @@ import replaceEmoji from "discourse/helpers/replace-emoji";
 import { i18n } from "discourse-i18n";
 import LikeToggle from "../../components/like-toggle";
 import endsWithEllipsis from "../../helpers/ends-with-ellipsis";
-import categoryBadge from "../../helpers/category-badge";
+import categoryBadge from "discourse/helpers/category-badge";
 
 export default class PostPrimary extends Component {
   @service router;
