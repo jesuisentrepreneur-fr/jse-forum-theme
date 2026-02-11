@@ -106,9 +106,9 @@ table.topic-list:not(.bookmark-list) {
           .link-top-line {
             grid-area: title;
 
-            .topic-post-badges {
-              line-height: 0;
-            }
+            // .topic-post-badges {
+            //   line-height: 0;
+            // }
 
             a.title {
               padding: 0;
