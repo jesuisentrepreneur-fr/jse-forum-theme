@@ -106,9 +106,9 @@ table.topic-list:not(.bookmark-list) {
           .link-top-line {
             grid-area: title;
 
-            // .topic-post-badges {
-            //   line-height: 0;
-            // }
+            .topic-post-badges {
+              line-height: 0;
+            }
 
             a.title {
               padding: 0;
@@ -120,14 +120,14 @@ table.topic-list:not(.bookmark-list) {
             display: contents;
 
             .badge-category__wrapper {
-              //display: none;
+              display: none;
               grid-area: category;
               padding-bottom: 0.25rem;
 
-              .badge-category {
-                &::before {
-                  content: unset;
-                }
+              // .badge-category {
+              //   &::before {
+              //     content: unset;
+              //   }
 
                 .badge-category__name {
                   color: var(--g-neutral-30);
