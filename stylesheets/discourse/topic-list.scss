@@ -280,23 +280,7 @@ table.topic-list:not(.bookmark-list) {
   }
 
   &__actions {
-    display: flex;
-    grid-area: actions;
-    gap: 0.5rem;
-    place-self: self-start end;
-    margin: 0;
-    padding-left: 1rem;
-    list-style: none;
-    margin-top: -0.2rem;
-
-    .topic__reply-button .d-icon {
-      color: var(--neutral-10);
-    }
-
-    button,
-    a {
-      @include button($size: sm);
-    }
+    display: none;
   }
 }
 
