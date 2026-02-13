@@ -168,23 +168,10 @@ input[type=email], input[type=url], input[type=search], input[type=tel], input[t
 }
 
 // Custom header
-.d-header-wrap {
-    width: 100vw;
-    position: sticky;
-}
 
 body.has-sidebar-page .d-header .wrap {
     max-width: 100%;
     padding: 0;
-}
-
-.d-header .wrap .contents {
-    display: flex;
-    gap: 0;
-}
-
-.d-header .d-header-icons li.c-user {
-    display: flex;
 }
 
 // Search bar

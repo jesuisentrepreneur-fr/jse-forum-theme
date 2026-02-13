@@ -9,8 +9,8 @@
   box-shadow: none;
 
   &-wrap {
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    width: 100vw;
   }
 
   .header-sidebar-toggle {
@@ -19,10 +19,8 @@
 
   .wrap {
     .contents {
-      display: grid;
-      grid-template-areas: "logo search utility";
-      grid-template-columns: 19rem var(--column-content) var(--column-blocks);
-      gap: 2rem;
+      display: flex;
+      gap: 0;
 
       @include viewport.until(lg) {
         display: flex;
@@ -84,6 +82,7 @@
 
     li.c-user {
       order: 9;
+      display: flex;
     }
 
     li > button,
