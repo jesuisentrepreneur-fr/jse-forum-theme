@@ -3,14 +3,22 @@
 .d-header {
   box-sizing: content-box;
   height: 3rem;
-  padding: 0.75rem 0;
-  background-color: var(--neutral-100);
+  padding: 12px 64px;
+  background-color: var(--pp-grey-000);
   border-bottom: 1px solid var(--neutral-90);
   box-shadow: none;
+  width: auto;
 
   &-wrap {
     position: sticky;
     width: 100vw;
+  }
+
+  .login-button {
+    border-radius: 64px;
+    .d-icon {
+      display: none;
+    }
   }
 
   .header-sidebar-toggle {
