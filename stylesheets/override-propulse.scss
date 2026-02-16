@@ -97,12 +97,6 @@ input[type=email], input[type=url], input[type=search], input[type=tel], input[t
 /* Header */
 
 // Bouton s'inscrire
-.d-header .signup-button {
-    border-radius: 64px;
-}
-.d-header .signup-button .d-button-label {
-    color: white;
-}
 
 .d-header .wrap {
     padding: 0;
@@ -511,11 +505,6 @@ nav.post-controls .actions button.create {
         .sidebar-wrapper {
             display: none;
         }
-    }
-
-    // fix padding header mobile
-    .d-header {
-        padding: 12px 24px;
     }
 
     // fix padding welcome banner mobile 

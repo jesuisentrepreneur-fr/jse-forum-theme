@@ -9,6 +9,10 @@
   box-shadow: none;
   width: auto;
 
+  @media (max-width: 768px) {
+    padding: 12px 12px;
+  }
+
   &-wrap {
     position: sticky;
     width: 100vw;
@@ -33,17 +37,8 @@
       @include viewport.until(lg) {
         display: flex;
       }
-
-      @media screen and (width <= 1080px) {
-        grid-template-columns: auto var(--column-content) var(--column-blocks);
-        gap: 1rem;
-      }
     }
   }
-
-  // .hamburger-dropdown {
-  //   display: none;
-  // }
 
   .home-logo-wrapper-outlet {
     display: flex;
