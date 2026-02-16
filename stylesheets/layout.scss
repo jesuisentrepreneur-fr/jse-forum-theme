@@ -45,12 +45,6 @@ body {
 
   &.has-sidebar-page,
   & {
-    .wrap {
-      box-sizing: border-box;
-      max-width: var(--d-max-width);
-      padding: 0 var(--wrap-px);
-    }
-
     &:not(:has(.blocks.--right)) {
       #main-outlet-wrapper {
         --column-content: minmax(45rem, 1fr);
