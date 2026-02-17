@@ -1,4 +1,5 @@
 @use "lib/viewport";
+@use "./_breakpoints.scss" as breakpoints;
 
 body:not(.admin-interface) {
   @include viewport.until(md) {
@@ -218,7 +219,7 @@ body:not(.admin-interface) {
   // The default sidebar becomes slide-out for smaller screens
   // but we still want to use it, so a duplicate is added
   // with the class c-small-sidebar
-  @media screen and (width <= 1000px) {
+  @include breakpoints.respond-to(large) {
     .sidebar-wrapper {
       .sidebar-section-wrapper .sidebar-section-header-wrapper {
         display: none;
