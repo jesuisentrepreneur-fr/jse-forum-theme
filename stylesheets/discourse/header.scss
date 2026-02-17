@@ -1,4 +1,5 @@
 @use "lib/viewport";
+@use "../discourse/mixins.scss" as mixins;
 
 .d-header {
   box-sizing: content-box;
@@ -9,7 +10,7 @@
   box-shadow: none;
   width: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: map-get(mixins.$breakpoints, tablet)) {
     padding: 12px 12px;
   }
 
