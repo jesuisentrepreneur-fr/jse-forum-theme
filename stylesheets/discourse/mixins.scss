@@ -3,16 +3,7 @@
   border-left: 5px solid var(--neutral-80);
 }
 
-$breakpoints: (
-  mobile-small: 320px,
-  mobile-medium: 350px,
-  mobile-large: 450px,
-  mobile-extra-large: 550px,
-  tablet: 768px,
-  medium: 850px,
-  large: 1000px,
-  extra-large: 1140px,
-);
+@use "./breakpoints.scss" as *;
 
 a {
   &.mention,
