@@ -1,5 +1,4 @@
 @use "lib/viewport";
-@use "../discourse/_breakpoints.scss" as breakpoints;
 
 body:not(.admin-interface) {
   @include viewport.until(md) {
@@ -215,6 +214,7 @@ body:not(.admin-interface) {
       height: 0.75em; // a little too large by default
     }
   }
+}
 
 .global-notice .close {
   width: 2em;
