@@ -8,3 +8,9 @@ $breakpoints: (
   large: 1000px,
   extra-large: 1140px,
 );
+
+@mixin respond-to($key) {
+  @media (max-width: map-get($breakpoints, $key)) {
+    @content;
+  }
+}
