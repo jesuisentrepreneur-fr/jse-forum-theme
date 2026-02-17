@@ -1,5 +1,5 @@
 @use "lib/viewport";
-@use "./_breakpoints.scss" as breakpoints;
+@use "../discourse/_breakpoints.scss" as breakpoints;
 
 body:not(.admin-interface) {
   @include viewport.until(md) {
