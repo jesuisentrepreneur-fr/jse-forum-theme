@@ -167,3 +167,7 @@ body {
 #user-card {
   background-color: var(--neutral-100);
 }
+
+.powered-by-discourse {
+  @include sr-only;
+}
