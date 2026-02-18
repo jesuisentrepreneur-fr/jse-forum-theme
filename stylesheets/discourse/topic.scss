@@ -464,3 +464,16 @@ nav.post-controls .actions .double-button:hover button {
 .embedded-posts.bottom .collapse-up {
   bottom: -5em;
 }
+
+aside.quote {
+  .title {
+    color: var(--neutral-10);
+    background: var(--neutral-95);
+  }
+}
+
+blockquote {
+  color: var(--neutral-10);
+  background: var(--neutral-95);
+  border-left: 5px solid var(--pp-secondary-1);
+}
