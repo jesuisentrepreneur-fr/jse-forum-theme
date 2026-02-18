@@ -36,20 +36,8 @@ span[aria-hidden="true"] {
     color: var(--pp-secondary-1);
 }
 
-.d-header .d-header-icons {
-    order: 1;
-}
-
-.d-header .header-buttons {
-    order: 2;
-    margin-top: 0;
-}
-
 .top-menu {
-    & .menu-item {
-        font-size: 16px; 
-    }
-    & .submenu-link {
+    & .menu-item, .submenu-link {
         font-size: 16px; 
     }
     & .menu-content {
