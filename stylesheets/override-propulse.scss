@@ -71,14 +71,6 @@ body.has-sidebar-page .d-header .wrap {
     padding: 0;
 }
 
-// Search bar
-.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container,
-.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container:has(.search-menu-panel),
-.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container:hover {
-  background-color: var(--pp-grey-200);
-}
-
-
 // Dropdown menu user
 .c-user-content {
     max-width: 320px!important;
