@@ -15,9 +15,7 @@
   }
 
   &-wrap {
-    position: sticky;
     width: 100vw;
-    padding: 0;
   }
 
   .login-button {
@@ -32,6 +30,7 @@
   }
 
   .wrap {
+    padding: 0;
     .contents {
       display: flex;
       gap: 0;
