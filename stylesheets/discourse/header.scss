@@ -140,7 +140,7 @@
       order: -1;
 
       .d-icon {
-        color: var(--primary);
+        color: var(--pp-secondary-1);
       }
     }
 
@@ -181,7 +181,7 @@
   .header-dropdown-toggle {
     > .btn {
       .d-icon {
-        color: var(--primary);
+        color: var(--pp-secondary-1);
       }
 
       .discourse-no-touch & {
@@ -214,7 +214,7 @@
     pointer-events: none; // prevent svg from blocking hover
     position: absolute;
     z-index: 1;
-    color: var(--primary);
+    color: var(--pp-secondary-1);
   }
 }
 

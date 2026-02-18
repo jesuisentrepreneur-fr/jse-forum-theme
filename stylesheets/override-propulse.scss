@@ -27,12 +27,6 @@ span[aria-hidden="true"] {
 }
 
 /* Header */
-.d-header-icons .header-dropdown-toggle > .btn .d-icon,
-.d-header .d-header-icons li.c-create .d-icon,
-.header-dropdown-toggle.current-user>.d-icon-bell {
-    color: var(--pp-secondary-1);
-}
-
 .d-header-mode .bootstrap-mode {
     background-color: var(--pp-secondary-1);  
     color: var(--pp-grey-000)!important;
