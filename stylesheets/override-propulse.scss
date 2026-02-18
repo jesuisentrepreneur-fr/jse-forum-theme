@@ -26,15 +26,6 @@ span[aria-hidden="true"] {
     display: none;
 }
 
-// Contour des inputs
-input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], 
-input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], 
-input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color],
-.select-kit.combo-box .select-kit-header {
-    border: 1px solid var(--pp-grey-600);
-}
-
-
 /* Header */
 .d-header-icons .header-dropdown-toggle > .btn .d-icon,
 .d-header .d-header-icons li.c-create .d-icon,
