@@ -36,23 +36,6 @@ span[aria-hidden="true"] {
     color: var(--pp-secondary-1);
 }
 
-.top-menu {
-    & .menu-item, .submenu-link {
-        font-size: 16px; 
-    }
-    & .menu-content {
-        margin: 0;
-        padding: 0 calc(64px - 0.5em)!important;
-    }
-}
-
-// Custom header
-
-body.has-sidebar-page .d-header .wrap {
-    max-width: 100%;
-    padding: 0;
-}
-
 // Dropdown menu user
 .c-user-content {
     max-width: 320px!important;
