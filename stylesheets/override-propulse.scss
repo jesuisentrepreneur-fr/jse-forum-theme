@@ -188,20 +188,6 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
     order: 3;
 }
 
-// Ajuster le positionnement pour la page des categories (categories-list)
-.categories-list .navigation-container .navigation-controls {
-    gap: 1rem;
-}
-
-.categories-list .navigation-container .navigation-controls .breadcrumbs__title {
-    order: 1;
-}
-
-.categories-list .navigation-container .navigation-controls .fk-d-button-tooltip {
-    order: 2;
-}
-
-
 // Content - Topic
 .extra-info-wrapper .topic-link {
     color: var(--pp-secondary-1);
@@ -283,34 +269,6 @@ span.chcklst-box:not(.checked).fa-square-o::before {
 nav.post-controls .actions button.create {
     color: var(--pp-grey-800);
     background-color: var(--pp-grey-300);
-}
-
-/* Admin */
-.admin-report .d-page-subheader__title a,
-.admin-area .sidebar-wrapper .admin-panel .sidebar-section-header-text,
-.admin-area .content-list ul li a,
-.admin-customize .themes-list-container__item {
-    color: var(--pp-secondary-1);
-}
-
-.admin-customize .themes-list-header .tab, .discourse-no-touch .admin-customize .themes-list-header .tab .d-icon {
-    color: var(--pp-secondary-1);
-}
-
-.admin-area .btn, .admin-area .btn .d-icon {
-    color: var(--pp-grey-800);
-}
-
-.admin-area .btn-primary, .admin-area .btn-primary .d-icon {
-    color: var(--pp-grey-000);
-}
-
-.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode {
-    background: none;
-}
-
-.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode .d-icon {
-    color: var(--pp-secondary-1);
 }
 
 /* Mobile */
