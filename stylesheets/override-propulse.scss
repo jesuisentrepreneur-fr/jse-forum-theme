@@ -199,16 +199,6 @@ img.avatar:not(.winner__avatar img.avatar,.user-card-avatar img.avatar), .cooked
     border-radius: 50%;
 }
 
-.timeline-container .topic-timeline .start-date,
-.timeline-container .topic-timeline .now-date,
-.timeline-container .topic-timeline .timeline-ago{
-    color: var(--pp-secondary-1);
-}
-
-.timeline-container .topic-timeline .timeline-handle {
-    background-color: var(--pp-secondary-1);
-}
-
 .topic-list-icons .d-icon-thumbtack.unpinned, .topic-list .d-icon-thumbtack.unpinned, 
 .latest-topic-list .d-icon-thumbtack.unpinned, .top-topic-list .d-icon-thumbtack.unpinned,
 .badge-category__wrapper .d-icon, .names .fa, .post-info.edits .widget-button .d-icon,
@@ -220,9 +210,6 @@ img.avatar:not(.winner__avatar img.avatar,.user-card-avatar img.avatar), .cooked
 .badge-category__wrapper .badge-category::before {
     content: "";
     background: var(--category-badge-color);
-    width: 1rem!important;
-    height: 1rem!important;
-    display: inline;
     border-radius: var(--rounded-sm);
 }
 
