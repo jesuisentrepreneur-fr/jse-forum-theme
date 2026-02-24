@@ -283,7 +283,9 @@ table.topic-list:not(.bookmark-list) {
 // UX PREFERENCE
 
 body:not(.user-messages-page) {
-  .topic-excerpt {
+  .topic-excerpt,
+  .topic__username,
+  .topic__last-reply > span:not(.relative-date) {
     display: none;
   }
 
