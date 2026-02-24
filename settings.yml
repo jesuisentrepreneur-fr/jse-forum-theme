@@ -4,11 +4,16 @@ sso_login_link:
   validations:
     url: true
 
-account_management_link:
+lien_gestion_compte:
   default: ""
   type: string
   validations:
     url: true
+
+topic_list_show_usernames:
+  default: false
+  type: bool
+  required: true
 
 blocks:
   default:
