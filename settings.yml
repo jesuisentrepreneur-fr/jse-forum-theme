@@ -1,7 +1,8 @@
-topic_list_show_usernames:
-  default: false
-  type: bool
-  required: true
+sso_login_link:
+  default: ""
+  type: string
+  validations:
+    url: true
 
 account_management_link:
   default: ""

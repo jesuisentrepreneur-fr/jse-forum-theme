@@ -9,7 +9,7 @@ export default apiInitializer((api) => {
     if (!api.getCurrentUser() && document?.cookie?.includes(`isAuthenticated=true`)) {
         // Redirect to the SSO login initiation route
         console.log("Cookie found, redirecting...");
-        window.location.href = `https://staging-forum.propulsebyca.fr/session/sso?return_path=/`;
+        window.location.href = settings.sso_login_link;
     }
     
     
