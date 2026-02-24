@@ -282,19 +282,6 @@ table.topic-list:not(.bookmark-list) {
 
 // UX PREFERENCE
 
-@if $topic-list-show-usernames == "false" {
-  body:not(.user-messages-page) {
-    .topic__username,
-    .topic__last-reply > span:not(.relative-date) {
-      display: none;
-    }
-
-    .topic__author .topic__metadata {
-      @include body-small;
-    }
-  }
-}
-
 body:not(.user-messages-page) {
   .topic-excerpt {
     display: none;

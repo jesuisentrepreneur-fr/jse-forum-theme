@@ -10,11 +10,6 @@ account_management_link:
   validations:
     url: true
 
-topic_list_show_usernames:
-  default: false
-  type: bool
-  required: true
-
 blocks:
   default:
     [
