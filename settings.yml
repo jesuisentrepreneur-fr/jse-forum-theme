@@ -4,7 +4,7 @@ sso_login_link:
   validations:
     url: true
 
-lien_gestion_compte:
+account_management_link:
   default: ""
   type: string
   validations:
