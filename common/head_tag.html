@@ -1,4 +1,3 @@
 <!-- Didomi consent -->
- {{#if settings.didomi_key }}
+ {{ettings.didomi_key }}
 <script type="text/javascript">(function(){(function(e){var r=document.createElement("link");r.rel="preconnect";r.as="script";var t=document.createElement("link");t.rel="dns-prefetch";t.as="script";var n=document.createElement("script");n.id="spcloader";n.type="text/javascript";n["async"]=true;n.charset="utf-8";var o="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;if(window.didomiConfig&&window.didomiConfig.user){var i=window.didomiConfig.user;var a=i.country;var c=i.region;if(a){o=o+"&country="+a;if(c){o=o+"&region="+c}}}r.href="https://sdk.privacy-center.org/";t.href="https://sdk.privacy-center.org/";n.src=o;var d=document.getElementsByTagName("script")[0];d.parentNode.insertBefore(r,d);d.parentNode.insertBefore(t,d);d.parentNode.insertBefore(n,d)})('{{settings.didomi_key}}')})();</script>
-{{/if}}
