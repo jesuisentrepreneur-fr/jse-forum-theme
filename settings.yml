@@ -10,6 +10,13 @@ account_management_link:
   validations:
     url: true
 
+didomi_key:
+  default: ""
+  type: string
+  validations:
+    min: 0
+    max: 256
+
 blocks:
   default:
     [
