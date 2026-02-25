@@ -1,10 +1,9 @@
-/**
- * Didomi consent banner initializer
- */
-
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("1.0", () => {
+/**
+* Didomi consent banner initializer
+*/
   const key = settings.didomi_key;
   if (!key) return;
 
@@ -24,4 +23,18 @@ export default apiInitializer("1.0", () => {
   n.charset = "utf-8";
   n.src = `https://sdk.privacy-center.org/${key}/loader.js?target=${document.location.hostname}`;
   document.head.appendChild(n);
+
+/**
+* Google Tag Manager initializer
+*/
+  const gtmId = settings.gtm_id;
+  if (!gtmId) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+  document.head.appendChild(script);
 });
