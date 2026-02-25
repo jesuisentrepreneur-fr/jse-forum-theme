@@ -25,20 +25,3 @@ export default apiInitializer("1.0", () => {
   n.src = `https://sdk.privacy-center.org/${key}/loader.js?target=${document.location.hostname}`;
   document.head.appendChild(n);
 });
-
-/**
- * Google Tag Manager initializer
- */
-
-export default apiInitializer("1.0", () => {
-  const gtmId = settings.gtm_id;
-  if (!gtmId) return;
-
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
-  document.head.appendChild(script);
-});
