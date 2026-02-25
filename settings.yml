@@ -17,6 +17,13 @@ didomi_key:
     min: 0
     max: 256
 
+gtm_id:
+  default: ""
+  type: string
+  validations:
+    min: 0
+    max: 256
+
 blocks:
   default:
     [
