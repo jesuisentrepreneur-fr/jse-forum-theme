@@ -1,3 +1,8 @@
+/**
+ * Breadcrumbs Component
+ * Displays navigation breadcrumbs above the main container.
+ * Tracks the current page using the router service and adapts the UI accordingly.
+ */
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import bodyClass from "discourse/helpers/body-class";
