@@ -15,12 +15,6 @@
   color: var(--pp-grey-900);
 }
 
-// Fond des blocks (sidebar de droite sur la home)
-.block {
-  --bg: var(--pp-grey-000);
-  color: var(--pp-grey-800);
-}
-
 // Cacher les span qui ont aria-hidden="true"
 span[aria-hidden="true"] {
     display: none;

@@ -23,22 +23,3 @@ gtm_id:
   validations:
     min: 0
     max: 256
-
-blocks_border_radius:
-  default: "xl"
-  type: enum
-  choices:
-    - xs
-    - sm
-    - md
-    - lg
-    - xl
-    - 2xl
-    - 3xl
-    - full
-
-blocks_top_image:
-  default: ""
-  type: string
-  validations:
-  url: true

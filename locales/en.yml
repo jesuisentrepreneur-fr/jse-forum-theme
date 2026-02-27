@@ -11,6 +11,3 @@ en:
   categories:
     category:
       view_all_topics: "View all topics (%{count})"
-  blocks:
-    profile:
-      hello: "Hi, %{name}!"
