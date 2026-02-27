@@ -2,7 +2,6 @@
  * Categories Component
  * Displays a list of categories with their descriptions, subcategories, and recent topics.
  */
-
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { fn } from "@ember/helper";

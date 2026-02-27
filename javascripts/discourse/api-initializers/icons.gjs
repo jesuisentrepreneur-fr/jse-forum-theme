@@ -3,7 +3,6 @@
  * Adds a user dropdown menu and a create menu to the header,
  * including role-based links for moderators and admins.
  */
-
 import { on } from "@ember/modifier";
 import { LinkTo } from "@ember/routing";
 import { eq, or } from "truth-helpers";

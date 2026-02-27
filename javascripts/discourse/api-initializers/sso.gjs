@@ -3,7 +3,6 @@
  * Checks if the user is authenticated on the SSO provider (BP) and redirects to the SSO login initiation route if they are not authenticated on Discourse but are authenticated on BP.
  * Also modifies the user dropdown menu to change the profile link and wording, and removes certain links from the dropdown.
  */
-
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer((api) => {

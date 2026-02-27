@@ -1,3 +1,7 @@
+/**
+ * Adds a back button to the topic title outlet, linking to the category page.
+ * Displays an arrow-left icon and is hidden for private messages.
+ */
 import Component from "@ember/component";
 import { classNames } from "@ember-decorators/component";
 import icon from "discourse/helpers/d-icon";
