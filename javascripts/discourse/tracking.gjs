@@ -3,8 +3,10 @@
  */
 
 (function() {
+    console.log("Tracking initialized");
   document.addEventListener("click", function(event) {        
     // Category click tracking
+    console.log("Click event detected", event.target);
     const target = event.target.closest(".sidebar-section-content-category .sidebar-section-link");
     if (target) {
       if (window.dataLayer) {
