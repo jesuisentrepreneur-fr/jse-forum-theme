@@ -1,5 +1,5 @@
 import { apiInitializer } from "discourse/lib/api";
-import tracking from "discourse/tracking";
+import "discourse/tracking";
 
 export default apiInitializer("1.0", () => {
 /**
