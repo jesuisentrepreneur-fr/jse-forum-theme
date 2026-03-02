@@ -7,14 +7,23 @@
   document.addEventListener("click", function(event) {        
     // Category click tracking
     console.log("Click event detected", event.target);
-      const link = event.target.closest(".sidebar-section-link");
-    if (target) {
+    let node = event.target;
+    while (node) {
+      console.log("Node:", node, "Classes:", node.className, "Tag:", node.tagName);
+      if (node.classList && node.classList.contains("sidebar-section-link")) {
+        console.log("FOUND LINK:", node);
+        break;
+      }
+      node = node.parentElement;
+    }
+    const link = event.target.closest(".sidebar-section-link");
+    if (link) {
       if (window.dataLayer) {
         window.dataLayer.push({
           event: "click.navigation",
           click: "forum_category",
-            cta_label: link.title,
-            page: link.href,
+          cta_label: link.title,
+          page: link.href,
         });
       }
     }
