@@ -8,22 +8,25 @@ export default apiInitializer("1.0", () => {
   const key = settings.didomi_key;
   if (!key) return;
 
-  const r = document.createElement("link");
-  r.rel = "preconnect"; r.as = "script";
-  const t = document.createElement("link");
-  t.rel = "dns-prefetch"; t.as = "script";
-  r.href = "https://sdk.privacy-center.org/";
-  t.href = "https://sdk.privacy-center.org/";
-  document.head.appendChild(r);
-  document.head.appendChild(t);
+  const preconnectLink = document.createElement("link");
+  preconnectLink.rel = "preconnect";
+  preconnectLink.as = "script";
+  preconnectLink.href = "https://sdk.privacy-center.org/";
+  document.head.appendChild(preconnectLink);
 
-  const n = document.createElement("script");
-  n.id = "spcloader";
-  n.type = "text/javascript";
-  n.async = true;
-  n.charset = "utf-8";
-  n.src = `https://sdk.privacy-center.org/${key}/loader.js?target=${document.location.hostname}`;
-  document.head.appendChild(n);
+  const dnsPrefetchLink = document.createElement("link");
+  dnsPrefetchLink.rel = "dns-prefetch";
+  dnsPrefetchLink.as = "script";
+  dnsPrefetchLink.href = "https://sdk.privacy-center.org/";
+  document.head.appendChild(dnsPrefetchLink);
+
+  const loaderScript = document.createElement("script");
+  loaderScript.id = "spcloader";
+  loaderScript.type = "text/javascript";
+  loaderScript.async = true;
+  loaderScript.charset = "utf-8";
+  loaderScript.src = `https://sdk.privacy-center.org/${key}/loader.js?target=${document.location.hostname}`;
+  document.head.appendChild(loaderScript);
 
 /**
 * Google Tag Manager initializer

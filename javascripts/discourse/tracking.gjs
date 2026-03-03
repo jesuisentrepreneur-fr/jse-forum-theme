@@ -16,13 +16,15 @@
       }
       node = node.parentElement;
     }
-    const link = event.target.closest(".sidebar-section-link");
+    const link = event.target.closest(".sidebar-section-link.sidebar-section");
     if (link) {
+      const lastSpan = link.querySelector("span span") || link.querySelector("span") || link;
+      const ctaLabel = lastSpan.textContent.trim();
       if (window.dataLayer) {
         window.dataLayer.push({
           event: "click.navigation",
           click: "forum_category",
-          cta_label: link.title,
+          cta_label: ctaLabel,
           page: link.href,
         });
       }
