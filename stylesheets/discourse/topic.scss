@@ -179,8 +179,15 @@
 }
 
 .topic-post {
-  border: 0;
-  border-bottom: 2px solid var(--neutral-60);
+    border: 0;
+    position: relative;
+    &::after {
+      position: absolute;
+      left: 4em;
+      bottom: 0;
+      width: calc(100% - 4em);
+      border-bottom: 2px solid var(--neutral-60);
+    }
 
   article.onscreen-post {
     .row {
