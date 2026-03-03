@@ -278,10 +278,6 @@ nav.post-controls .actions button.create {
         max-width: auto!important;
     }
 
-    .sidebar-wrapper {
-        display: none!important;
-    }
-
     .d-header .title {
         --d-logo-height: 32px;
     }
@@ -308,14 +304,6 @@ nav.post-controls .actions button.create {
 
     .topic-title-outlet.back {
         display: none;
-    }
-
-    // hide footer nav on mobile chat routes to maximize chat space
-
-    body.has-full-page-chat {
-        .sidebar-wrapper {
-            display: none;
-        }
     }
 
     // fix padding welcome banner mobile 
