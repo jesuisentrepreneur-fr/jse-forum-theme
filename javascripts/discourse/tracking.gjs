@@ -16,8 +16,8 @@
       }
       node = node.parentElement;
     }
-    const link = event.target.closest(".sidebar-section-link.sidebar-section");
-    if (link) {
+    const link = event.target.closest(".sidebar-section-link");
+    if (link && link.closest(".sidebar-section")) {
       const lastSpan = link.querySelector("span span") || link.querySelector("span") || link;
       const ctaLabel = lastSpan.textContent.trim();
       if (window.dataLayer) {
