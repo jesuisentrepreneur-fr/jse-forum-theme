@@ -28,17 +28,6 @@ export default class CentralCategories extends Component {
       return;
     }
     event.preventDefault();
-
-    // GTM tracking
-    if (window.dataLayer) {
-      window.dataLayer.push({
-        event: "click.navigation",
-        click: "forum_category",
-        cta_label: event.currentTarget?.querySelector("h3")?.innerText || "",
-        page: url,
-      });
-    }
-
     this.router.transitionTo(url);
   }
 

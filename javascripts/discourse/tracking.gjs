@@ -3,31 +3,31 @@
  */
 
 (function() {
-    console.log("Tracking initialized");
-  document.addEventListener("click", function(event) {        
-    // Category click tracking
-    console.log("Click event detected", event.target);
-    let node = event.target;
-    while (node) {
-      console.log("Node:", node, "Classes:", node.className, "Tag:", node.tagName);
-      if (node.classList && node.classList.contains("sidebar-section-link")) {
-        console.log("FOUND LINK:", node);
-        break;
-      }
-      node = node.parentElement;
-    }
+  document.addEventListener("click", function(event) {
+    // GTM tracking for sidebar category links
     const link = event.target.closest(".sidebar-section-link");
     if (link && link.closest(".sidebar-section")) {
-      const contentSpan = link.querySelector(".sidebar-section-link-content-text");
-      const ctaLabel = contentSpan ? contentSpan.textContent.trim() : link.textContent.trim();
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: "click.navigation",
-          click: "forum_category",
-          cta_label: ctaLabel,
-          page: link.href,
-        });
-      }
+      const ctaLabel = link.querySelector(".sidebar-section-link-content-text")?.textContent.trim() || link.textContent.trim();
+      window.dataLayer?.push({
+        event: "click.navigation",
+        click: "forum_category",
+        cta_label: ctaLabel,
+        page: link.href,
+      });
+      return;
+    }
+
+    // GTM tracking for categories on the categories page
+    const catItem = event.target.closest(".c-categories__item");
+    if (catItem) {
+      const h3 = catItem.querySelector("h3");
+      const ctaLabel = h3 ? h3.innerText.trim() : "";
+      window.dataLayer?.push({
+        event: "click.navigation",
+        click: "forum_category",
+        cta_label: ctaLabel,
+        page: catItem.querySelector("a")?.href || "",
+      });
     }
   });
 })();
