@@ -1,3 +1,8 @@
+/**
+ * Post Connector Component
+ * Displays custom content above each topic list item in the topic list view.
+ * Used to inject UI elements or information above individual topics on the main topic list page.
+ */
 import Component from "@glimmer/component";
 import { get } from "@ember/helper";
 import { action } from "@ember/object";
