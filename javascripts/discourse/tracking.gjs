@@ -18,8 +18,8 @@
     }
     const link = event.target.closest(".sidebar-section-link");
     if (link && link.closest(".sidebar-section")) {
-      const lastSpan = link.querySelector("span span") || link.querySelector("span") || link;
-      const ctaLabel = lastSpan.textContent.trim();
+      const contentSpan = link.querySelector(".sidebar-section-link-content-text");
+      const ctaLabel = contentSpan ? contentSpan.textContent.trim() : link.textContent.trim();
       if (window.dataLayer) {
         window.dataLayer.push({
           event: "click.navigation",
