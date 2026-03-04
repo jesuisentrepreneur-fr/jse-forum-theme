@@ -10,12 +10,12 @@
     }
 }
 
-// Forcer la couleur du texte de la popup didomi en noir
+// Forced black color for the Didomi popup text
 #didomi-popup { 
   color: var(--pp-grey-900);
 }
 
-// Cacher les span qui ont aria-hidden="true"
+// Hide spans with aria-hidden="true"
 span[aria-hidden="true"] {
     display: none;
 }
@@ -38,7 +38,7 @@ span[aria-hidden="true"] {
     top: var(--main-outlet-offset)!important;
 }
 
-// Couleurs des éléments de la sidebar
+// sidebar's elements colors
 .sidebar-section-link-wrapper .sidebar-section-link,
 .sidebar-section-link-wrapper .sidebar-section-link-prefix.icon, 
 .sidebar-section-link-wrapper .sidebar-section-link-prefix.span {
@@ -80,7 +80,7 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
 
 /* Welcome Banner */
 
-// Propriétés quand la bannière est placé en dessous du header
+// Properties when the banner is placed below the header
 .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
   margin-bottom: 0;
   width: 100%;
@@ -89,12 +89,12 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
   background: var(--pp-grey-000);
 }
 
-// Propriétés quand la bannière est placée dans le main container
+// Properties when the banner is placed in the main container
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-wrapper {
     margin: 0;
 }
 
-// Enlever le padding 
+// Remove padding
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner {
     padding: 0 0 16px;
 }
@@ -107,13 +107,13 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
   background: var(--pp-grey-000);
 }
 
-// Couleur des liens 
+// links color 
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper a,
 .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper a {
     color: var(--pp-secondary-1);
 }
 
-// Bouton fermer
+// Close button
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-close,
 .below-site-header-outlet.welcome-link-banner-connector .welcome-link-banner-close {
     background-color: transparent;
@@ -122,19 +122,19 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
 
 
 /* Main */
-// Enlever la bordure de main-outlet
+// Remove the border of main-outlet
 body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapper #main-outlet {
     border: 0;
 }
 
 
-// Rajout du bouton "create topic"
+// Add the "create topic" button
 .fk-d-button-tooltip:has(#create-topic) { 
     display: flex;
     grid-area: create;
 }
 
-// Ajuster la couleur du bouton "create topic"
+// Adjust the color of the "create topic" button
 .fk-d-button-tooltip #create-topic {
     color: var(--pp-grey-000);
     background-color: var(--pp-secondary-1);
@@ -144,7 +144,7 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
     color: var(--pp-grey-000)!important;
 }
 
-// Ajuster la grid template
+// Adjust the grid template
 .navigation-category .navigation-container .navigation-controls {
     grid-template-areas:
     "title title notifications edit list"
@@ -154,18 +154,18 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
     grid-template-rows: auto auto auto;
 }
 
-// Ajuster le bouton notif 
+// Adjust the notification button 
 .navigation-category .navigation-container .navigation-controls .notifications-tracking-trigger {
     border-radius: var(--rounded-full);
     height: 2.5rem;
 }
 
-// Ajuster le bouton edit 
+// Adjust the edit button 
 .navigation-container .navigation-controls .edit-category {
     left: 0;
 }
 
-// Ajuster le positionnement pour la home (navigation-topic)
+// Adjust the positioning for the home (navigation-topic)
 .navigation-topics .navigation-container .navigation-controls {
     gap: 1rem;
 }
@@ -270,7 +270,7 @@ nav.post-controls .actions button.create {
     }
 
     #search-button {
-        // retrait du bouton search dans la navbar en haut
+        // remove the search button from the top navbar
         display: none;
     }
 
@@ -317,7 +317,7 @@ nav.post-controls .actions button.create {
         margin-top: 0;
     }
 
-    // fix la taille de la modal "reply control" (nouveau message)
+    // fix width modal "reply control" (new message)
     body.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
         width: 100%;
         margin: auto;
@@ -325,14 +325,14 @@ nav.post-controls .actions button.create {
         box-shadow: 0 10px 60px -5px rgba(193, 201, 214, 0.45);
     }
 
-    // fix la taille de main outlet
+    // fix the size of main outlet
     body.has-sidebar-page:not(:has(.blocks.--right)) #main-outlet-wrapper #main-outlet, 
     body:not(:has(.blocks.--right)) #main-outlet-wrapper #main-outlet {
         max-width: 100%;
         box-sizing: border-box;
     }
 
-    // fix taille d'un élément sur la page profil qui sortait de la div
+    // fix the size of an element on the profile page that was overflowing the div
     .user-main .about .secondary {
         width: auto;
     }
