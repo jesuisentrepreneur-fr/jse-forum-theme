@@ -182,6 +182,7 @@
     border: 0;
     position: relative;
     &::after {
+      content: "";
       position: absolute;
       left: 4em;
       bottom: 0;

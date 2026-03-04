@@ -6,16 +6,6 @@
   }
 }
 
-.admin-interface #main-outlet {
-  .nav-pills {
-    display: none;
-  }
-
-  .row .nav-pills {
-    display: flex;
-  }
-}
-
 .admin-report .d-page-subheader__title a,
 .admin-area .sidebar-wrapper .admin-panel .sidebar-section-header-text,
 .admin-area .content-list ul li a,
