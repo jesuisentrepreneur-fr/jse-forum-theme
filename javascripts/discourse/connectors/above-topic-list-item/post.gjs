@@ -21,7 +21,6 @@ import number from "discourse/helpers/number";
 import replaceEmoji from "discourse/helpers/replace-emoji";
 import { i18n } from "discourse-i18n";
 import LikeToggle from "../../components/like-toggle";
-import endsWithEllipsis from "../../helpers/ends-with-ellipsis";
 import categoryBadge from "discourse/helpers/category-badge";
 
 export default class PostPrimary extends Component {
@@ -59,6 +58,10 @@ export default class PostPrimary extends Component {
     if (this.boundNavigate) {
       element.parentElement.removeEventListener("click", this.boundNavigate);
     }
+  }
+
+  function endsWithEllipsis(excerpt) {
+  return excerpt.endsWith("&hellip;");
   }
 
   <template>
