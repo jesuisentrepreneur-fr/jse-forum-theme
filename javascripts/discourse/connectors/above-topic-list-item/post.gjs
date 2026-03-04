@@ -60,8 +60,8 @@ export default class PostPrimary extends Component {
     }
   }
 
-  function endsWithEllipsis(excerpt) {
-  return excerpt.endsWith("&hellip;");
+  endsWithEllipsis(excerpt) {
+    return excerpt.endsWith("&hellip;");
   }
 
   <template>
