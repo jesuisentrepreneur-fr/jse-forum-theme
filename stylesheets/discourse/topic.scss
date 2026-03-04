@@ -184,9 +184,9 @@
     &::after {
       content: "";
       position: absolute;
-      left: 4em;
+      left: 1.5em;
       bottom: 0;
-      width: calc(100% - 4em);
+      width: calc(100% - 2em);
       border-bottom: 2px solid var(--neutral-60);
     }
 
