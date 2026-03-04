@@ -60,8 +60,8 @@ export default class PostPrimary extends Component {
     }
   }
 
-  endsWithEllipsis(excerpt) {
-    return excerpt.endsWith("&hellip;");
+  get excerptEndsWithEllipsis() {
+    return this.topic?.excerpt?.endsWith("&hellip;");
   }
 
   <template>
@@ -112,7 +112,7 @@ export default class PostPrimary extends Component {
         {{#if this.topic.excerpt}}
           <div class="topic__excerpt">
             {{replaceEmoji (htmlSafe this.topic.excerpt)}}
-            {{#if (endsWithEllipsis this.topic.excerpt)}}
+            {{#if this.excerptEndsWithEllipsis}}
               <a href={{this.topic.firstPostUrl}} class="topic__readmore">
                 {{i18n "js.read_more"}}
               </a>
