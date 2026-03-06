@@ -379,6 +379,10 @@
 
 .topic-map.--bottom {
   border-bottom-color: var(--primary-very-low);
+  border-bottom: 2px solid var(--neutral-60);
+}
+
+.topic-map.--op {
   border-top: 2px solid var(--neutral-60);
 }
 
