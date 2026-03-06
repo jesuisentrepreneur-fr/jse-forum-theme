@@ -366,8 +366,7 @@
 }
 
 .topic-status-info,
-.topic-timer-info,
-.topic-map.--op {
+.topic-timer-info {
   border-top-color: var(--primary-very-low);
 }
 
@@ -378,7 +377,6 @@
 }
 
 .topic-map.--bottom {
-  border-bottom-color: var(--primary-very-low);
   border-bottom: 2px solid var(--neutral-60);
 }
 
