@@ -6,12 +6,29 @@
   }
 }
 
-.admin-interface #main-outlet {
-  .nav-pills {
-    display: none;
-  }
+.admin-report .d-page-subheader__title a,
+.admin-area .sidebar-wrapper .admin-panel .sidebar-section-header-text,
+.admin-area .content-list ul li a,
+.admin-customize .themes-list-container__item {
+    color: var(--pp-secondary-1);
+}
 
-  .row .nav-pills {
-    display: flex;
-  }
+.admin-customize .themes-list-header .tab, .discourse-no-touch .admin-customize .themes-list-header .tab .d-icon {
+    color: var(--pp-secondary-1);
+}
+
+.admin-area .btn, .admin-area .btn .d-icon {
+    color: var(--pp-grey-800);
+}
+
+.admin-area .btn-primary, .admin-area .btn-primary .d-icon {
+    color: var(--pp-grey-000);
+}
+
+.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode {
+    background: none;
+}
+
+.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode .d-icon {
+    color: var(--pp-secondary-1);
 }

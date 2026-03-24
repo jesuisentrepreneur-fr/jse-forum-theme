@@ -1,3 +1,8 @@
+/**
+ * Post Connector Component
+ * Displays custom content above each topic list item in the topic list view.
+ * Used to inject UI elements or information above individual topics on the main topic list page.
+ */
 import Component from "@glimmer/component";
 import { get } from "@ember/helper";
 import { action } from "@ember/object";
@@ -16,7 +21,7 @@ import number from "discourse/helpers/number";
 import replaceEmoji from "discourse/helpers/replace-emoji";
 import { i18n } from "discourse-i18n";
 import LikeToggle from "../../components/like-toggle";
-import endsWithEllipsis from "../../helpers/ends-with-ellipsis";
+import categoryBadge from "discourse/helpers/category-badge";
 
 export default class PostPrimary extends Component {
   @service router;
@@ -55,6 +60,10 @@ export default class PostPrimary extends Component {
     }
   }
 
+  get excerptEndsWithEllipsis() {
+    return this.topic?.excerpt?.endsWith("&hellip;");
+  }
+
   <template>
     <div
       class="hidden"
@@ -91,7 +100,7 @@ export default class PostPrimary extends Component {
                 (if this.topic.category.read_restricted "--locked")
               }}
             >
-              {{this.topic.category.name}}
+            {{categoryBadge this.topic.category}}  
             </a>
           {{/if}}
         {{/unless}}
@@ -103,7 +112,7 @@ export default class PostPrimary extends Component {
         {{#if this.topic.excerpt}}
           <div class="topic__excerpt">
             {{replaceEmoji (htmlSafe this.topic.excerpt)}}
-            {{#if (endsWithEllipsis this.topic.excerpt)}}
+            {{#if this.excerptEndsWithEllipsis}}
               <a href={{this.topic.firstPostUrl}} class="topic__readmore">
                 {{i18n "js.read_more"}}
               </a>
@@ -113,34 +122,31 @@ export default class PostPrimary extends Component {
       </div>
     {{/if}}
 
-    {{#unless (eq this.topic.posters.length 1)}}
-      <div
-        class={{if
-          (eq (get this.topic.posters "0.extras") "latest")
-          "topic__replies --reverse"
-          "topic__replies"
-        }}
-      >
-        <ul>
-          {{#each this.topic.posters as |poster index|}}
-            {{#if (eq index 0)}}
-              {{#if (eq poster.extras "latest")}}
-                <li>
-                  <UserLink @user={{poster.user}}>
-                    {{avatar poster.user imageSize="small"}}
-                  </UserLink>
-                </li>
-              {{/if}}
-            {{else}}
-              <li>
-                <UserLink @user={{poster.user}}>
-                  {{avatar poster.user imageSize="small"}}
-                </UserLink>
-              </li>
-            {{/if}}
-          {{/each}}
-        </ul>
+    <div
+      class={{if
+        (eq (get this.topic.posters "0.extras") "latest")
+        "topic__replies --reverse"
+        "topic__replies"
+      }}
+    >
+      <ul>
+        <li>
+          <UserLink @user={{get this.topic.posters "0.user"}}>
+            {{avatar (get this.topic.posters "0.user") imageSize="small"}}
+          </UserLink>
+        </li>
+        {{#each this.topic.posters as |poster|}}
+          {{#unless (eq poster.user.id (get this.topic.posters "0.user.id"))}}
+            <li>
+              <UserLink @user={{poster.user}}>
+                {{avatar poster.user imageSize="small"}}
+              </UserLink>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
 
+      {{#if this.topic.lastPostUrl}}
         <a href={{this.topic.lastPostUrl}} class="topic__last-reply">
           <span>
             {{htmlSafe
@@ -154,9 +160,9 @@ export default class PostPrimary extends Component {
             }}
           </span>
         </a>
+      {{/if}}
 
-      </div>
-    {{/unless}}
+    </div>
 
     <ul class="topic__actions">
       {{#unless (eq this.topic.like_count 0)}}

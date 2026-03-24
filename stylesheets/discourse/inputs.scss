@@ -18,4 +18,8 @@ input[type="color"] {
   border: var(--border-outer);
 
   @include body-large;
+  
+  .select-kit.combo-box .select-kit-header {
+    border: 1px solid var(--pp-grey-600);
+  }
 }

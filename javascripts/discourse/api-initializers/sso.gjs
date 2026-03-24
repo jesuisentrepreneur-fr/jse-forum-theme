@@ -1,21 +1,21 @@
-/* temporaire, à variabiliser pour le sso */
-
+/**
+ * SSO Initializer
+ * Checks if the user is authenticated on the SSO provider (BP) and redirects to the SSO login initiation route if they are not authenticated on Discourse but are authenticated on BP.
+ * Also modifies the user dropdown menu to change the profile link and wording, and removes certain links from the dropdown.
+ */
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer((api) => {
-    console.log(api.getCurrentUser() ? "User Authenticated !" : "User NOT Authenticated.");
-    console.log(document?.cookie?.includes(`isAuthenticated=true`) ? "is authenticated on BP !" : "is NOT authenticated on BP.");
     // Only if the user isn't authenticated
     if (!api.getCurrentUser() && document?.cookie?.includes(`isAuthenticated=true`)) {
         // Redirect to the SSO login initiation route
-        console.log("Cookie found, redirecting...");
-        window.location.href = `https://forum.propulsebyca.fr/session/sso?return_path=/`;
+        window.location.href = settings.sso_login_link;
     }
     
     
   api.onPageChange(() => {
     
-    // Modification du lien de gestion de compte
+    // Change to account management link
     if (document.querySelector(".c-user-trigger")) {
         document.querySelector(".c-user-trigger").onclick = function() {
             // const menuProfileHeader = document.querySelector(".c-user-menu__profile")
@@ -30,12 +30,12 @@ export default apiInitializer((api) => {
             //     menuProfileHeaderTextCTA.innerHTML = "Gestion de compte"
             // }
 
-            // Modification du lien de profil
+            // Change profile link
             const menuProfileHeader = document.querySelector(".c-user-menu__profile")
             if (menuProfileHeader) {
                 const currentUser = api.getCurrentUser();
                 if (currentUser) {
-                    // créer une URL vers ses préférences
+                    // create a URL to their preferences
                     menuProfileHeader.href = `/u/${currentUser.username}/preferences/account`;
                     menuProfileHeader.onclick = function() {
                         window.location = `/u/${currentUser.username}/preferences/account`;
@@ -43,35 +43,35 @@ export default apiInitializer((api) => {
                 }
             }
 
-            // Modification du wording de profil
+            // Change profile wording
             const menuProfileHeaderTextCTA = document.querySelector(".c-user-menu__profile-cta")
             if (menuProfileHeaderTextCTA) {
                 menuProfileHeaderTextCTA.innerHTML = "Mon profil"
             }
             
-            // Enlever le lien "invitations" du dropdown
+            // Remove the "invitations" link from the dropdown
             const menuProfileInvitations = document.querySelector(".c-user-menu__links li:nth-child(3)")
             if (menuProfileInvitations) {
                 menuProfileInvitations.style.display = "none"
             }
 
-            // Modifier "préferences" en "Paramètres du compte"
+            // Change "preferences" to "Account Settings"
             const menuProfilePreferences = document.querySelector(".c-user-menu__links li:nth-child(4) a")
             if (menuProfilePreferences) {
-                // changer le texte
+                // change the text
                 const span = menuProfilePreferences.querySelector("span");
                 if (span) {
                  span.textContent = "Paramètres du compte";
                 }
                 
-                // changer le href
-                menuProfilePreferences.href = "https://compte.propulsebyca.fr/account-details?source=FORUM";
+                // change href
+                menuProfilePreferences.href = settings.account_management_link;
                 menuProfilePreferences.onclick = function() {
-                    window.location = "https://compte.propulsebyca.fr/account-details?source=FORUM";
+                    window.location = settings.account_management_link;
                 }
             }
 
-            // Enlever les liens "À propos" et "Politique de confidentialité" du dropdown
+            // Remove the "About Us" and "Privacy Policy" links from the dropdown
             const aboutUsLink = document.querySelector(".c-user-menu__footer li:nth-child(1)");
             const privacyLink = document.querySelector(".c-user-menu__footer li:nth-child(3)");
             if (aboutUsLink) {

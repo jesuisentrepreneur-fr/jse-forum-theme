@@ -1,16 +1,28 @@
 @use "lib/viewport";
+@use "./_breakpoints.scss" as breakpoints;
 
 .d-header {
   box-sizing: content-box;
   height: 3rem;
-  padding: 0.75rem 0;
-  background-color: var(--neutral-100);
+  padding: 12px 64px;
+  background-color: var(--pp-grey-000);
   border-bottom: 1px solid var(--neutral-90);
   box-shadow: none;
+  width: auto;
+
+  @include breakpoints.respond-to(tablet) {
+    padding: 12px 12px;
+  }
 
   &-wrap {
-    position: fixed;
-    width: 100%;
+    width: 100vw;
+  }
+
+  .login-button {
+    border-radius: 64px;
+    .d-icon {
+      display: none;
+    }
   }
 
   .header-sidebar-toggle {
@@ -18,26 +30,17 @@
   }
 
   .wrap {
+    max-width: 100%;
+    padding: 0;
     .contents {
-      display: grid;
-      grid-template-areas: "logo search utility";
-      grid-template-columns: 19rem var(--column-content) var(--column-blocks);
-      gap: 2rem;
+      display: flex;
+      gap: 0;
 
       @include viewport.until(lg) {
         display: flex;
       }
-
-      @media screen and (width <= 1080px) {
-        grid-template-columns: auto var(--column-content) var(--column-blocks);
-        gap: 1rem;
-      }
     }
   }
-
-  // .hamburger-dropdown {
-  //   display: none;
-  // }
 
   .home-logo-wrapper-outlet {
     display: flex;
@@ -84,6 +87,7 @@
 
     li.c-user {
       order: 9;
+      display: flex;
     }
 
     li > button,
@@ -137,7 +141,7 @@
       order: -1;
 
       .d-icon {
-        color: var(--primary);
+        color: var(--pp-secondary-1);
       }
     }
 
@@ -178,7 +182,7 @@
   .header-dropdown-toggle {
     > .btn {
       .d-icon {
-        color: var(--primary);
+        color: var(--pp-secondary-1);
       }
 
       .discourse-no-touch & {
@@ -211,11 +215,21 @@
     pointer-events: none; // prevent svg from blocking hover
     position: absolute;
     z-index: 1;
-    color: var(--primary);
+    color: var(--pp-secondary-1);
   }
 }
 
 .menu-panel {
   border: none;
   border-radius: var(--rounded-md);
+}
+
+.top-menu {
+    & .menu-item, .submenu-link {
+        font-size: 16px; 
+    }
+    & .menu-content {
+        margin: 0;
+        padding: 0 calc(64px - 0.5em)!important;
+    }
 }

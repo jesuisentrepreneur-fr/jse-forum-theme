@@ -1,3 +1,7 @@
+/**
+ * Breadcrumbs component for discovery page. Shows the current category and a dropdown to filter topics.
+ * Used on the homepage, category page, and categories listing page.
+ * */
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { on } from "@ember/modifier";

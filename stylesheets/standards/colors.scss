@@ -1,15 +1,52 @@
 :root {
-  --neutral-0: var(--pp-grey-800);
-  --neutral-5: var(--pp-grey-800);
-  --neutral-10: var(--pp-grey-800);
-  --neutral-20: var(--pp-grey-800);
-  --neutral-30: var(--pp-grey-700);
-  --neutral-40: var(--pp-grey-650);
-  --neutral-50: var(--pp-grey-650);
-  --neutral-60: var(--pp-grey-300);
-  --neutral-70: var(--pp-grey-200);
-  --neutral-80: var(--pp-grey-000);
-  --neutral-90: var(--pp-grey-000);
-  --neutral-95: var(--pp-grey-000);
-  --neutral-100: var(--pp-grey-000);
+    --pp-primary: #007461;
+    --pp-secondary-1: #308276;
+    --pp-secondary-2: #A0D7A2;
+    --pp-secondary-3: #004652;
+    --pp-secondary-4: #D8EAD7;
+    --pp-accent-1: #E62F44;
+    --pp-accent-2: #0A94A8;
+    
+    --pp-grey-000: #FFFFFF;
+    --pp-grey-200: #F7F8FA;
+    --pp-grey-300: #ECEDF0;
+    --pp-grey-600: #C1C9D6;
+    --pp-grey-650: #8D93AA;
+    --pp-grey-700: #666E8A;
+    --pp-grey-800: #071621;
+    --pp-grey-900: #000000;
+    
+    // Fix
+    --header_primary: var(--pp-secondary-1);
+    
+    --d-sidebar-background: var(--pp-grey-200);
+    --d-sidebar-admin-background: var(--pp-grey-200);
+    
+    --d-sidebar-active-color: var(--pp-secondary-1);
+    
+    --d-sidebar-highlight-background: var(--pp-grey-000);
+    --d-sidebar-active-background: var(--pp-grey-000);
+    
+    --d-sidebar-header-color: var(--pp-grey-000);
+    --d-sidebar-header-icon-color: var(--pp-secondary-1);
+    
+    --category-badge-border-radius: 2px;
+    
+    --neutral-0: var(--pp-grey-800);
+    --neutral-5: var(--pp-grey-800);
+    --neutral-10: var(--pp-grey-800);
+    --neutral-20: var(--pp-grey-800);
+    --neutral-30: var(--pp-grey-700);
+    --neutral-40: var(--pp-grey-650);
+    --neutral-50: var(--pp-grey-650);
+    --neutral-60: var(--pp-grey-300);
+    --neutral-70: var(--pp-grey-200);
+    --neutral-80: var(--pp-grey-000);
+    --neutral-90: var(--pp-grey-000);
+    --neutral-95: var(--pp-grey-000);
+    --neutral-100: var(--pp-grey-000);
+    
+    --primary-very-low: var(--pp-grey-200);
+    --primary-medium: var(--pp-secondary-1);
+    --primary-med-or-secondary-med: var(--pp-secondary-1);
 }

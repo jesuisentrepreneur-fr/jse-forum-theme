@@ -1,56 +1,3 @@
-:root {
-    --pp-primary: #007461;
-    --pp-secondary-1: #308276;
-    --pp-secondary-2: #A0D7A2;
-    --pp-secondary-3: #004652;
-    --pp-secondary-4: #D8EAD7;
-    --pp-accent-1: #E62F44;
-    --pp-accent-2: #0A94A8;
-    
-    --pp-grey-000: #FFFFFF;
-    --pp-grey-200: #F7F8FA;
-    --pp-grey-300: #ECEDF0;
-    --pp-grey-600: #C1C9D6;
-    --pp-grey-650: #8D93AA;
-    --pp-grey-700: #666E8A;
-    --pp-grey-800: #071621;
-    --pp-grey-900: #000000;
-    
-    // Fix
-    --header_primary: var(--pp-secondary-1);
-    
-    --d-sidebar-background: var(--pp-grey-200);
-    --d-sidebar-admin-background: var(--pp-grey-200);
-    
-    --d-sidebar-active-color: var(--pp-secondary-1);
-    
-    --d-sidebar-highlight-background: var(--pp-grey-000);
-    --d-sidebar-active-background: var(--pp-grey-000);
-    
-    --d-sidebar-header-color: var(--pp-grey-000);
-    --d-sidebar-header-icon-color: var(--pp-secondary-1);
-    
-    --category-badge-border-radius: 2px;
-    
-    --neutral-0: var(--pp-grey-800);
-    --neutral-5: var(--pp-grey-800);
-    --neutral-10: var(--pp-grey-800);
-    --neutral-20: var(--pp-grey-800);
-    --neutral-30: var(--pp-grey-700);
-    --neutral-40: var(--pp-grey-650);
-    --neutral-50: var(--pp-grey-650);
-    --neutral-60: var(--pp-grey-300);
-    --neutral-70: var(--pp-grey-200);
-    --neutral-80: var(--pp-grey-000);
-    --neutral-90: var(--pp-grey-000);
-    --neutral-95: var(--pp-grey-000);
-    --neutral-100: var(--pp-grey-000);
-    
-    --primary-very-low: var(--pp-grey-200);
-    --primary-medium: var(--pp-secondary-1);
-    --primary-med-or-secondary-med: var(--pp-secondary-1);
-}
-
 /* CSS Personnalisé */
 
 #create-topic {
@@ -63,83 +10,17 @@
     }
 }
 
-#main-outlet {
-    width: 100%;
-    overflow: hidden;
-}
-
-// Fond du site en gris
-html, body {
-  background-color: var(--pp-grey-200);
-}
-
-// Forcer la couleur du texte de la popup didomi en noir
+// Forced black color for the Didomi popup text
 #didomi-popup { 
   color: var(--pp-grey-900);
 }
 
-// Fond des blocks (sidebar de droite sur la home)
-.block {
-  --bg: var(--pp-grey-000);
-  color: var(--pp-grey-800);
-}
-
-// Cacher les span qui ont aria-hidden="true"
+// Hide spans with aria-hidden="true"
 span[aria-hidden="true"] {
     display: none;
 }
 
-// Contour des inputs
-input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], 
-input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], 
-input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color],
-.select-kit.combo-box .select-kit-header {
-    border: 1px solid var(--pp-grey-600);
-}
-
-
 /* Header */
-.d-header {
-    background-color: var(--pp-grey-000);
-    padding: 12px 64px;
-    width: auto;
-}
-
-// // Bouton se connecter
-.d-header .login-button {
-    // color: var(--pp-grey-900);
-    // background-color: transparent;
-    border-radius: 64px;
-}
-
-// .d-header .login-button:hover {
-//     color: var(--pp-secondary-1);
-//     background-color: transparent;
-// }
-
-.d-header .login-button .d-icon {
-    display: none;
-}
-
-// Bouton s'inscrire
-.d-header .signup-button {
-    border-radius: 64px;
-}
-.d-header .signup-button .d-button-label {
-    color: white;
-}
-
-.d-header .wrap {
-    padding: 0;
-    max-width: 100%;
-}
-
-.d-header-icons .header-dropdown-toggle > .btn .d-icon,
-.d-header .d-header-icons li.c-create .d-icon,
-.header-dropdown-toggle.current-user>.d-icon-bell {
-    color: var(--pp-secondary-1);
-}
-
 .d-header-mode .bootstrap-mode {
     background-color: var(--pp-secondary-1);  
     color: var(--pp-grey-000)!important;
@@ -147,61 +28,6 @@ input[type=email], input[type=url], input[type=search], input[type=tel], input[t
 
 .discourse-no-touch .d-header-icons .header-dropdown-toggle>.btn:hover .d-icon {
     color: var(--pp-secondary-1);
-}
-
-.d-header .d-header-icons {
-    order: 1;
-}
-
-.d-header .header-buttons {
-    order: 2;
-    margin-top: 0;
-}
-
-.top-menu {
-    & .menu-item {
-        font-size: 16px; 
-    }
-    & .submenu-link {
-        font-size: 16px; 
-    }
-    & .menu-content {
-        margin: 0;
-        padding: 0 calc(64px - 0.5em)!important;
-    }
-}
-
-// Custom header
-.d-header-wrap {
-    width: 100vw;
-    position: sticky;
-}
-
-body.has-sidebar-page .d-header .wrap {
-    max-width: 100%;
-    padding: 0;
-}
-
-.d-header .wrap .contents {
-    display: flex;
-    gap: 0;
-}
-
-.d-header .d-header-icons li.c-user {
-    display: flex;
-}
-
-// Search bar
-.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container,
-.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container:has(.search-menu-panel),
-.floating-search-input .search-banner-inner.wrap .search-menu .search-menu-container:hover {
-  background-color: var(--pp-grey-200);
-}
-
-
-// Dropdown menu user
-.c-user-content {
-    max-width: 320px!important;
 }
  
 /* Sidebar */
@@ -212,7 +38,7 @@ body.has-sidebar-page .d-header .wrap {
     top: var(--main-outlet-offset)!important;
 }
 
-// Couleurs des éléments de la sidebar
+// sidebar's elements colors
 .sidebar-section-link-wrapper .sidebar-section-link,
 .sidebar-section-link-wrapper .sidebar-section-link-prefix.icon, 
 .sidebar-section-link-wrapper .sidebar-section-link-prefix.span {
@@ -247,14 +73,14 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
   margin-right: 0.35rem;
 }
 
-.sidebar-footer-wrapper .sidebar-footer-container:before {
-  all: unset;
+.sidebar-footer-wrapper{
+  display: none;
 }
 
 
 /* Welcome Banner */
 
-// Propriétés quand la bannière est placé en dessous du header
+// Properties when the banner is placed below the header
 .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
   margin-bottom: 0;
   width: 100%;
@@ -263,12 +89,12 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
   background: var(--pp-grey-000);
 }
 
-// Propriétés quand la bannière est placée dans le main container
+// Properties when the banner is placed in the main container
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-wrapper {
     margin: 0;
 }
 
-// Enlever le padding 
+// Remove padding
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner {
     padding: 0 0 16px;
 }
@@ -281,13 +107,13 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
   background: var(--pp-grey-000);
 }
 
-// Couleur des liens 
+// links color 
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper a,
 .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper a {
     color: var(--pp-secondary-1);
 }
 
-// Bouton fermer
+// Close button
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-close,
 .below-site-header-outlet.welcome-link-banner-connector .welcome-link-banner-close {
     background-color: transparent;
@@ -296,19 +122,19 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
 
 
 /* Main */
-// Enlever la bordure de main-outlet
+// Remove the border of main-outlet
 body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapper #main-outlet {
     border: 0;
 }
 
 
-// Rajout du bouton "create topic"
+// Add the "create topic" button
 .fk-d-button-tooltip:has(#create-topic) { 
     display: flex;
     grid-area: create;
 }
 
-// Ajuster la couleur du bouton "create topic"
+// Adjust the color of the "create topic" button
 .fk-d-button-tooltip #create-topic {
     color: var(--pp-grey-000);
     background-color: var(--pp-secondary-1);
@@ -318,7 +144,7 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
     color: var(--pp-grey-000)!important;
 }
 
-// Ajuster la grid template
+// Adjust the grid template
 .navigation-category .navigation-container .navigation-controls {
     grid-template-areas:
     "title title notifications edit list"
@@ -328,18 +154,18 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
     grid-template-rows: auto auto auto;
 }
 
-// Ajuster le bouton notif 
+// Adjust the notification button 
 .navigation-category .navigation-container .navigation-controls .notifications-tracking-trigger {
     border-radius: var(--rounded-full);
     height: 2.5rem;
 }
 
-// Ajuster le bouton edit 
+// Adjust the edit button 
 .navigation-container .navigation-controls .edit-category {
     left: 0;
 }
 
-// Ajuster le positionnement pour la home (navigation-topic)
+// Adjust the positioning for the home (navigation-topic)
 .navigation-topics .navigation-container .navigation-controls {
     gap: 1rem;
 }
@@ -356,20 +182,6 @@ body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapp
     order: 3;
 }
 
-// Ajuster le positionnement pour la page des categories (categories-list)
-.categories-list .navigation-container .navigation-controls {
-    gap: 1rem;
-}
-
-.categories-list .navigation-container .navigation-controls .breadcrumbs__title {
-    order: 1;
-}
-
-.categories-list .navigation-container .navigation-controls .fk-d-button-tooltip {
-    order: 2;
-}
-
-
 // Content - Topic
 .extra-info-wrapper .topic-link {
     color: var(--pp-secondary-1);
@@ -379,16 +191,6 @@ img.avatar:not(.winner__avatar img.avatar,.user-card-avatar img.avatar), .cooked
     border: 0.25rem solid var(--pp-light-grey);
     background: var(--pp-light-grey);
     border-radius: 50%;
-}
-
-.timeline-container .topic-timeline .start-date,
-.timeline-container .topic-timeline .now-date,
-.timeline-container .topic-timeline .timeline-ago{
-    color: var(--pp-secondary-1);
-}
-
-.timeline-container .topic-timeline .timeline-handle {
-    background-color: var(--pp-secondary-1);
 }
 
 .topic-list-icons .d-icon-thumbtack.unpinned, .topic-list .d-icon-thumbtack.unpinned, 
@@ -402,9 +204,6 @@ img.avatar:not(.winner__avatar img.avatar,.user-card-avatar img.avatar), .cooked
 .badge-category__wrapper .badge-category::before {
     content: "";
     background: var(--category-badge-color);
-    width: 1rem!important;
-    height: 1rem!important;
-    display: inline;
     border-radius: var(--rounded-sm);
 }
 
@@ -419,10 +218,6 @@ kbd {
 
 span.chcklst-box:not(.checked).fa-square-o::before {
     background-color: var(--pp-secondary-1);
-}
-
-blockquote {
-    border-left: 5px solid var(--pp-secondary-1);
 }
 
 // Content - Footer topics
@@ -457,40 +252,6 @@ nav.post-controls .actions button.create {
     background-color: var(--pp-grey-300);
 }
 
-/* Admin */
-.admin-report .d-page-subheader__title a,
-.admin-area .sidebar-wrapper .admin-panel .sidebar-section-header-text,
-.admin-area .content-list ul li a,
-.admin-customize .themes-list-container__item {
-    color: var(--pp-secondary-1);
-}
-
-.admin-customize .themes-list-header .tab, .discourse-no-touch .admin-customize .themes-list-header .tab .d-icon {
-    color: var(--pp-secondary-1);
-}
-
-.admin-area .btn, .admin-area .btn .d-icon {
-    color: var(--pp-grey-800);
-}
-
-.admin-area .btn-primary, .admin-area .btn-primary .d-icon {
-    color: var(--pp-grey-000);
-}
-
-.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode {
-    background: none;
-}
-
-.admin-customize .themes-list-container__item.inactive-indicator .btn.select-inactive-mode .d-icon {
-    color: var(--pp-secondary-1);
-}
-
-// retrait de "Welcome to the community" banner 
-.blocks.--top {
-    display:none!important;
-}
-//
-
 /* Mobile */
 
 @media (max-width: 768px) {
@@ -509,16 +270,12 @@ nav.post-controls .actions button.create {
     }
 
     #search-button {
-        // retrait du bouton search dans la navbar en haut
+        // remove the search button from the top navbar
         display: none;
     }
 
     .c-user-content {
         max-width: auto!important;
-    }
-
-    .sidebar-wrapper {
-        display: none!important;
     }
 
     .d-header .title {
@@ -549,19 +306,6 @@ nav.post-controls .actions button.create {
         display: none;
     }
 
-    // hide footer nav on mobile chat routes to maximize chat space
-
-    body.has-full-page-chat {
-        .sidebar-wrapper {
-            display: none;
-        }
-    }
-
-    // fix padding header mobile
-    .d-header {
-        padding: 12px 24px;
-    }
-
     // fix padding welcome banner mobile 
     .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-wrapper, 
     .below-site-header-outlet.welcome-link-banner-connector .welcome-link-banner-wrapper {
@@ -573,7 +317,7 @@ nav.post-controls .actions button.create {
         margin-top: 0;
     }
 
-    // fix la taille de la modal "reply control" (nouveau message)
+    // fix width modal "reply control" (new message)
     body.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
         width: 100%;
         margin: auto;
@@ -581,14 +325,14 @@ nav.post-controls .actions button.create {
         box-shadow: 0 10px 60px -5px rgba(193, 201, 214, 0.45);
     }
 
-    // fix la taille de main outlet
+    // fix the size of main outlet
     body.has-sidebar-page:not(:has(.blocks.--right)) #main-outlet-wrapper #main-outlet, 
     body:not(:has(.blocks.--right)) #main-outlet-wrapper #main-outlet {
         max-width: 100%;
         box-sizing: border-box;
     }
 
-    // fix taille d'un élément sur la page profil qui sortait de la div
+    // fix the size of an element on the profile page that was overflowing the div
     .user-main .about .secondary {
         width: auto;
     }

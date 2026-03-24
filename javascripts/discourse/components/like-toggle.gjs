@@ -1,3 +1,8 @@
+/**
+ * LikeToggle Component
+ * Displays a like button for topics, handles like/unlike actions 
+ * Manages permissions, like count, and error handling for a smooth user experience.
+ */
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { on } from "@ember/modifier";

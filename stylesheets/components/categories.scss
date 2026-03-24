@@ -200,3 +200,15 @@ div:has(> .category-list) {
 .top-topic-list {
   margin: 0 1rem;
 }
+
+.categories-list .navigation-container .navigation-controls {
+    gap: 1rem;
+}
+
+.categories-list .navigation-container .navigation-controls .breadcrumbs__title {
+    order: 1;
+}
+
+.categories-list .navigation-container .navigation-controls .fk-d-button-tooltip {
+    order: 2;
+}

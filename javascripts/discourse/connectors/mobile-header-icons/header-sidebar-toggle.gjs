@@ -1,3 +1,6 @@
+/**
+ * Adds a button to the mobile header that toggles the sidebar.
+ */
 import Component from "@glimmer/component";
 import { service } from "@ember/service";
 import { on } from "@ember/modifier";

@@ -108,16 +108,11 @@
 
         .search-menu-container {
           box-sizing: border-box;
-          background: var(--neutral-100);
+          background: var(--pp-grey-200);
           border: var(--border-outer);
           border-radius: var(--rounded-full);
 
-          &:hover {
-            background: var(--neutral-100);
-          }
-
           &:has(.search-menu-panel) {
-            background: none;
             box-shadow: none;
 
             .searching {

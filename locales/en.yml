@@ -11,13 +11,3 @@ en:
   categories:
     category:
       view_all_topics: "View all topics (%{count})"
-  blocks:
-    top_contributors:
-      title: "Top Contributors"
-      unit: "pts"
-    top_topics:
-      title: "Top Topics"
-    online:
-      label: "online"
-    profile:
-      hello: "Hi, %{name}!"
