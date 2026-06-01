@@ -10,11 +10,6 @@
     }
 }
 
-// Forced black color for the Didomi popup text
-#didomi-popup { 
-  color: var(--pp-grey-900);
-}
-
 // Hide spans with aria-hidden="true"
 span[aria-hidden="true"] {
     display: none;
