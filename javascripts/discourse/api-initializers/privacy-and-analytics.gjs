@@ -3,29 +3,30 @@ import "discourse/tracking";
 
 export default apiInitializer("1.0", () => {
 /**
-* Didomi consent banner initializer
+*  TagCommander consent banner initializer
 */
-  const key = settings.didomi_key;
-  if (!key) return;
+  if (document.getElementById("tagcommander-script")) {
+    return;
+  }
 
   const preconnectLink = document.createElement("link");
   preconnectLink.rel = "preconnect";
   preconnectLink.as = "script";
-  preconnectLink.href = "https://sdk.privacy-center.org/";
+  preconnectLink.href = "https://cdn.trustcommander.net";
   document.head.appendChild(preconnectLink);
 
   const dnsPrefetchLink = document.createElement("link");
   dnsPrefetchLink.rel = "dns-prefetch";
   dnsPrefetchLink.as = "script";
-  dnsPrefetchLink.href = "https://sdk.privacy-center.org/";
+  dnsPrefetchLink.href = "https://cdn.trustcommander.net";
   document.head.appendChild(dnsPrefetchLink);
 
   const loaderScript = document.createElement("script");
-  loaderScript.id = "spcloader";
+  loaderScript.id = "tagcommander-script";
   loaderScript.type = "text/javascript";
   loaderScript.async = true;
   loaderScript.charset = "utf-8";
-  loaderScript.src = `https://sdk.privacy-center.org/${key}/loader.js?target=${document.location.hostname}`;
+  loaderScript.src = "https://cdn.trustcommander.net/privacy/7797/privacy_v2_1.js";
   document.head.appendChild(loaderScript);
 
 /**
