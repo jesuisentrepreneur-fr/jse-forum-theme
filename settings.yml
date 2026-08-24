@@ -10,7 +10,7 @@ account_management_link:
   validations:
     url: true
 
-gtm_id:
+tag_co_environment:
   default: ""
   type: string
   validations:

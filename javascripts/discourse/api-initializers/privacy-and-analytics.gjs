@@ -2,6 +2,17 @@ import { apiInitializer } from "discourse/lib/api";
 import "discourse/tracking";
 
 export default apiInitializer("1.0", () => {
+
+/**
+* TagCommander tracking container initializer
+*/
+  const tagCoTrackingScript = document.createElement("script");
+  tagCoTrackingScript.id = "tagcommander-tracking-script";
+  tagCoTrackingScript.type = "text/javascript";
+  tagCoTrackingScript.async = true;
+  tagCoTrackingScript.src = "https://cdn.tagcommander.com/7797/tc_Propulsebyca_20.js";
+  document.head.appendChild(tagCoTrackingScript);
+
 /**
 *  TagCommander consent banner initializer
 */
@@ -29,17 +40,4 @@ export default apiInitializer("1.0", () => {
   loaderScript.src = "https://cdn.trustcommander.net/privacy/7797/privacy_v2_1.js";
   document.head.appendChild(loaderScript);
 
-/**
-* Google Tag Manager initializer
-*/
-  const gtmId = settings.gtm_id;
-  if (!gtmId) return;
-
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
-  document.head.appendChild(script);
 });
