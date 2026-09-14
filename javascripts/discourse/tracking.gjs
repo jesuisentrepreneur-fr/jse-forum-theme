@@ -8,8 +8,8 @@
     const link = event.target.closest(".sidebar-section-link");
     if (link && link.closest(".sidebar-section")) {
       const ctaLabel = link.querySelector(".sidebar-section-link-content-text")?.textContent.trim() || link.textContent.trim();
-      window.tC?.event?.click_navigation?.({
-        event_name: "click_navigation",
+      window.tC?.event?.click_navigation?.(null, {
+        event_name: "click.navigation",
         click: "forum_category",
         cta_label: ctaLabel,
         page: link.href,
@@ -24,8 +24,8 @@
     if (catItem) {
       const h3 = catItem.querySelector("h3");
       const ctaLabel = h3 ? h3.innerText.trim() : "";
-      window.tC?.event?.click_navigation?.({
-        event_name: "click_navigation",
+      window.tC?.event?.click_navigation?.(null, {
+        event_name: "click.navigation",
         click: "forum_category",
         cta_label: ctaLabel,
         page: catItem.querySelector("a")?.href || "",
