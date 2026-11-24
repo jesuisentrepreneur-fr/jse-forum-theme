@@ -11,3 +11,7 @@ en:
   categories:
     category:
       view_all_topics: "View all topics (%{count})"
+  welcome_banner:
+    title: "Welcome to our community!"
+    title_emoji: ""
+    subtitle: "<p>Join the conversation, and remember to be kind.</p>"

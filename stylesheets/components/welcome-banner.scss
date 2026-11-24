@@ -1,0 +1,102 @@
+// Welcome banner (connectors/below-site-header/welcome-banner.gjs).
+// Same rendering as the former "Welcome Link Banner" component + its overrides.
+// Some selectors are prefixed with .c-welcome-banner to outweigh the global
+// .btn / .btn-flat rules of override-propulse.scss, imported after this file.
+.c-welcome-banner {
+  margin-bottom: 1em;
+  background-color: var(--pp-grey-200);
+
+  &__inner {
+    display: flex;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 2.5em auto 0;
+    background: var(--pp-grey-000);
+    border-radius: var(--rounded-xl);
+    box-shadow: none;
+  }
+
+  &__content {
+    // The bottom padding includes the spacing of the former (empty) links block
+    padding: 1.5em 2em 1em;
+    text-align: center;
+  }
+
+  // Title (h1) and decorative emoji on the same line, like the former h2
+  &__heading {
+    margin-bottom: 0.5rem;
+    font-family: var(--heading-font-family);
+    font-size: 1.75em;
+    font-weight: var(--heading-font-weight);
+    line-height: 1.2;
+
+    .c-welcome-banner__title {
+      display: inline;
+      margin: 0;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  & &__subtitle {
+    p {
+      margin: 0.5em 0 0;
+    }
+
+    a {
+      color: var(--pp-secondary-1);
+    }
+  }
+
+  & &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+
+    .d-icon {
+      color: var(--primary-medium);
+    }
+
+    .discourse-no-touch &:hover .d-icon {
+      color: var(--primary);
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    &__box {
+      flex-wrap: wrap;
+    }
+
+    &__content {
+      padding: 1.33em 1em 0.75em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1em;
+
+    &__box {
+      max-width: 90vw;
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__box {
+      padding: 0;
+    }
+
+    &__content {
+      padding-bottom: 1.75em;
+    }
+  }
+}
