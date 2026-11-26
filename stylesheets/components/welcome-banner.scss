@@ -44,6 +44,12 @@
       font-size: inherit;
       line-height: inherit;
     }
+
+    // The emoji is aria-hidden (decorative), and override-propulse.scss hides every
+    // span[aria-hidden="true"]: this selector is more specific, so it shows again
+    .c-welcome-banner__emoji {
+      display: inline;
+    }
   }
 
   & &__subtitle {
