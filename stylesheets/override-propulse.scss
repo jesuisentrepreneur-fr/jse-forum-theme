@@ -73,49 +73,6 @@ body:not(.admin-interface) #sidebar-section-content-categories .sidebar-section-
 }
 
 
-/* Welcome Banner */
-
-// Properties when the banner is placed below the header
-.below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
-  margin-bottom: 0;
-  width: 100%;
-  border-radius: var(--rounded-xl);
-  box-shadow: none;
-  background: var(--pp-grey-000);
-}
-
-// Properties when the banner is placed in the main container
-.above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-wrapper {
-    margin: 0;
-}
-
-// Remove padding
-.above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner {
-    padding: 0 0 16px;
-}
-
-.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper {
-  margin: 0;
-  width: 100%;
-  border-radius: var(--rounded-lg);
-  box-shadow: none;
-  background: var(--pp-grey-000);
-}
-
-// links color 
-.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper a,
-.below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper a {
-    color: var(--pp-secondary-1);
-}
-
-// Close button
-.above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-close,
-.below-site-header-outlet.welcome-link-banner-connector .welcome-link-banner-close {
-    background-color: transparent;
-}
-
-
-
 /* Main */
 // Remove the border of main-outlet
 body.has-sidebar-page #main-outlet-wrapper #main-outlet, body #main-outlet-wrapper #main-outlet {
@@ -299,17 +256,6 @@ nav.post-controls .actions button.create {
 
     .topic-title-outlet.back {
         display: none;
-    }
-
-    // fix padding welcome banner mobile 
-    .above-main-container-outlet.welcome-link-banner-connectors .welcome-link-banner-wrapper, 
-    .below-site-header-outlet.welcome-link-banner-connector .welcome-link-banner-wrapper {
-        margin-top: 1em;
-    }
-    .above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, 
-    .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
-        max-width: 90vw;
-        margin-top: 0;
     }
 
     // fix width modal "reply control" (new message)
