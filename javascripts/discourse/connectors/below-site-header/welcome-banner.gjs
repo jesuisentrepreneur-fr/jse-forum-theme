@@ -12,29 +12,33 @@ import { action } from "@ember/object";
 import { service } from "@ember/service";
 import { htmlSafe } from "@ember/template";
 import DButton from "discourse/components/d-button";
-import { i18n } from "discourse-i18n";
+import I18n, { i18n } from "discourse-i18n";
 
-// Same key as the former "Welcome Link Banner" component: people who already
-// dismissed it won't see it again.
-const DISMISSED_KEY = "discourse_dismissedWelcomeLinkBanner";
+// keyValueStore prefixes keys with "discourse_": this is the localStorage key of the
+// former "Welcome Link Banner" component, so people who already dismissed it won't
+// see it again. The store also copes with a disabled/blocked localStorage.
+const DISMISSED_KEY = "dismissedWelcomeLinkBanner";
 
 export default class WelcomeBanner extends Component {
+  @service keyValueStore;
   @service router;
 
-  @tracked dismissed = !!localStorage.getItem(DISMISSED_KEY);
+  @tracked dismissed = !!this.keyValueStore.getItem(DISMISSED_KEY);
 
   get isDiscoveryRoute() {
     return this.router.currentRouteName?.includes("discovery");
   }
 
+  // Optional and decorative: lookup returns undefined (not a "missing translation"
+  // placeholder) when the key is absent
   get emoji() {
-    return i18n(themePrefix("welcome_banner.title_emoji"));
+    return I18n.lookup(themePrefix("welcome_banner.title_emoji"));
   }
 
   @action
   dismiss() {
-    localStorage.setItem(DISMISSED_KEY, "true");
     this.dismissed = true;
+    this.keyValueStore.setItem(DISMISSED_KEY, true);
   }
 
   <template>
@@ -66,6 +70,7 @@ export default class WelcomeBanner extends Component {
               <DButton
                 @icon="xmark"
                 @title="close"
+                @ariaLabel="close"
                 @action={{this.dismiss}}
                 class="btn-flat c-welcome-banner__close"
               />
